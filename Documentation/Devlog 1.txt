@@ -1,0 +1,59 @@
+
+I. Preface
+
+Hey folks! 
+
+1.Welcome to my first devlog where I'll be logging, uhm, video logging
+the development of Typr (yep, you guessed it, a 
+typing game) from concept to release.
+
+2.First I'd like make an introduction and give a few reasons to why I'm
+doing this.
+
+3.If you want to skip all this subjective nonsense then click here.
+
+II. Introduction
+
+1. First off my name is Andrew and I am an aspiring video game developer
+I've had plenty of experience with personal projects and as of today
+I have yet to fully release a game to the public.
+
+2. I've worked both in teams and alone and so far I have only managed
+to release small demos or abandon whole projects due to their scope
+and size, a habit shared amongst a large amount of indie developers.
+
+3. I am not an expert, I have yet to work in the industry so take
+everything I say with a very large amount of salt.
+
+4. Here are the main reasons why I'm doing these devlogs:
+It helps structure my time and the development schedule of the game
+
+Forming a small community around the game and its development course
+would help me keep on track and focus on completing it.
+
+From my experience there are a lot of people out there that have amazing
+skills when it comes to specific parts of development such as art or
+programming but can't really think of how to start a game development project
+
+I want to share my experience and my development habits when it comes tog
+projects like these and hopefully help someone in need of some advice or guidance.
+
+Devlogs would also help me getting useful feedback from the game dev community
+on my work.
+
+Again, I am not an expert and I don't want these devlogs to turn into a sort of "tutorial", 
+I am only sharing my own experience with game development.
+
+III. Tools
+For starters let's go through the tools I'm using for this project. 
+
+I will be building the game in Game Maker Studio: Professional 1.4
+I will be using git with github to store and version control my work as well as tortoiseGit to make it easier to work with it.
+I am also going to be using various image editors such as Photoshop, Paint.net and Aseprite as well as Audacity for sound.
+and finally I will keep track of the project's development using Trello as well as keep any other notes on it too.
+
+IV. Conception
+
+V. Prototype
+
+VI. End
