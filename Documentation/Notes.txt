@@ -1,33 +1,30 @@
 How fast can you type the words on the screen? 
 
-Name:
 Typr
+
 main mechanic -> correctly type a generated word
 score
-different kind of words 
+different kind of words (day-to-day and academic)
 different modes (classic, gibberish)
 different difficulties (mixing symbols and numbers)
 race against time
-different obstacles
+different visual obstacles
 ----------------------------
 
 
 
 Marketing
-1 - Indie Game Development - Part 1 - My Introduction, Documentation, Prototyping,
+
+Facebook
+Twitter
+Itch.io
+Discord Server
+
+1 - My Introduction
 -> Not an expert in GML or Game dev, really passionate about it, dream to work in the industry
 -> Gonna document my journey to releasing this game
 -> Not going to teach GML Directly but through devlogs regarding my own game
--> Documentation, notes, documents, tools for development, how to build an ideea for a game,
-marketing
--> Prototyping, correct way to prototype, when do you know your prototype is done?
---
-Continue with weekly devlogs. 
---
-2. 
-3. 
-4.
-5.
+-> Continue with weekly devlogs
 
 
 

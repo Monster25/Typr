@@ -1,3 +1,4 @@
+//Generates random word using var alphabet and returns it
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var j = irandom_range(argument0,argument1);
 var s = "";
