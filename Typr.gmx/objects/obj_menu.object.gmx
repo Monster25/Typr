@@ -32,6 +32,9 @@ menu[2] = "Quit";
 space = 80;
 mpos = 0;
 pushed = 0;
+
+
+
 </string>
           </argument>
         </arguments>
@@ -102,10 +105,16 @@ scr_menu();
           <argument>
             <kind>1</kind>
             <string>///Draw menu 
-draw_text(500,500,"Classic");
-draw_text(500,500+space,"Gibbrsh");
-draw_text(500,500+space*2,"Quit");
-draw_rectangle(300,500+space*mpos,350,550+space*mpos,0);
+draw_set_font(fnt_menu)
+draw_set_halign(fa_center)
+//draw_set_valign(fa_middle);
+//Title
+draw_text(global.displayWidth/2,0,"Typr");
+//Menu choices
+draw_text(global.displayWidth/2,global.displayHeight/3,"Classic");
+draw_text(global.displayWidth/2,global.displayHeight/2,"Gibbrsh");
+draw_text(global.displayWidth/2,global.displayHeight/1.5,"Quit");
+draw_rectangle(300,500+100*mpos,350,550+100*mpos,0);
 
 </string>
           </argument>

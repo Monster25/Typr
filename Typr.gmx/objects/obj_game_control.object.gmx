@@ -55,7 +55,7 @@ state_init("menu");
           <argument>
             <kind>1</kind>
             <string>///Classic Mode Variables
-time_gain_classic = 3;
+time_gain_classic = 0.3; //per letter
 current_paragraph = 0;
 //Used for word numbering in paragraph
 word_index = 1;
@@ -84,7 +84,45 @@ current_word = 0; //array index
           <argument>
             <kind>1</kind>
             <string>///Gibrrsh Mode Variables
-time_gain_gibbrsh = 3;
+initial_time_gibbrsh = 10; //initial time for this mode
+
+time_gain_gibbrsh = 0.5; //per letter
+word_count = 0; //word count 
+letter_count_correct = 0; //letter count
+
+
+//Limits for word generation
+limiter = 0;
+//[Lower limit, Higher Limit, nr of words to get to, difficulty level]
+letter_limits[0,0] = 3;
+letter_limits[0,1] = 6;
+letter_limits[0,2] = 15;
+
+letter_limits[1,0] = 5;
+letter_limits[1,1] = 8;
+letter_limits[1,2] = 30;
+
+letter_limits[2,0] = 8;
+letter_limits[2,1] = 14;
+letter_limits[2,2] = 45;
+
+//Combos
+comboer = 0;
+//[letter count, combo reward x score]
+letter_combo[0, 0] = 0;
+letter_combo[0, 1] = 1.0;
+
+letter_combo[1, 0] = 10;
+letter_combo[1, 1] = 1.5;
+
+letter_combo[2, 0] = 20;
+letter_combo[2, 1] = 1.8;
+
+letter_combo[3, 0] = 30;
+letter_combo[3, 1] = 2;
+
+//Difficulties
+current_difficulty_gibbrsh = 0; //increasing difficulty level
 </string>
           </argument>
         </arguments>
@@ -107,9 +145,9 @@ time_gain_gibbrsh = 3;
             <kind>1</kind>
             <string>///Classic Mode Paragraphs
 paragraphs[0] = "You know you're in love when you can't fall asleep because reality is finally better than your dreams.";
-paragraphs[1] = "Mother knows best.";
-paragraphs[2] = "Shit storm bois.";
-paragraphs[3] = "Cacaaaaaat.";
+paragraphs[1] = "Wub wub wub wub wub wub wub, wub WUB wub wub.";
+paragraphs[2] = "The first casualty in a war is truth.";
+paragraphs[3] = "Meow Meow wake up.";
 
 
 
@@ -155,7 +193,49 @@ color = c_white;
 i = -1;
 j = -1;
 
+//Used for correct letter checking for combos
+ok = 1;
+z = -1;
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Auto-Resolution
+//Get native resolution
+/*
+if (window_get_fullscreen())
+{
+global.displayWidth = display_get_width();
+global.displayHeight = display_get_height();
+}
+else
+{
+global.displayWidth = window_get_width();
+global.displayHeight = window_get_height();
+}
+*/
+global.displayWidth = display_get_width();
+global.displayHeight = display_get_height();
+//Set it
+scr_resolution(global.displayWidth, global.displayHeight);
 </string>
           </argument>
         </arguments>

@@ -26,10 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>///Draw debug info
-draw_text(100,100,obj_game_control.state_name)
+//draw_text(250,100,string(global.displayWidth)+" "+string(global.displayHeight))
 
-for (var i = 0;i&lt;array_length_1d(obj_game_control.words);i++)
-draw_text(100,120+i*20,obj_game_control.words[i]);
+draw_text(200,100,"Word count: "+string(obj_game_control.word_count));
+draw_text(200,150,"Word formation limits: "+string(obj_game_control.letter_limits[obj_game_control.limiter,0])+" "+string(obj_game_control.letter_limits[obj_game_control.limiter,1]))
+draw_text(200,200,"How many correct letters in a row: "+string(obj_game_control.letter_count_correct));
+draw_text(200,250,"On what combo are you?: "+string(obj_game_control.comboer)+" "+string(obj_game_control.letter_combo[obj_game_control.comboer,1]));
+draw_text(200,300,"Current difficulty gibbrsh: "+string(obj_game_control.limiter));
 </string>
           </argument>
         </arguments>

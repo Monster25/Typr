@@ -71,7 +71,7 @@ scr_reset_input(player_input);
 //Add score
 best_score+=time;
 //add gain to current time
-time += time_gain_classic;
+time += time_gain_classic*(string_length(display_word)-1);
 //Reset misc vars
 i = -1;
 //Go to next word aslong as there is enough paragraph left

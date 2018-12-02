@@ -1,0 +1,42 @@
+Gibbrsh: 3 difficulty level and an overall
+difficulty level
+
+1st just letters
+2nd letters and numbers
+3rd letters, numbers and symbols
+
+Overall difficulty: amount of those letters on
+each word
+
+"1st level"
+
+15 words - 3-6 letters
+30 words - 5-8 letters
+45 words - 8-14 letters
+
+
+10 letters streak = 1.5x time reward
+20 letters streak = 1.8x time reward
+30 letters streak = 2.0x time reward
+
+if you mistake letter, combo is gone
+
+
+Classic Mode:
+Diffrent modes in classic mode or maybe combine
+all of them in one? 
+
+Sentence generator
+Proverbs and Sayings
+Academic
+Artistic (Songs and movie quotes)
+
+Sentence generator 1st level
+Proverbs and Sayings 2nd level
+Artistic 3rd level
+Academic 4th level
+
+10 letters streak = 1.5x time reward
+20 letters streak = 1.8x time reward
+30 letters streak = 2.0x time reward
+

@@ -9,8 +9,6 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_generate_word.gml</script>
-    <script>scripts\scr_next_word.gml</script>
     <scripts name="State Machine Scripts">
       <script>scripts\state_machine_init.gml</script>
       <script>scripts\state_create.gml</script>
@@ -30,18 +28,32 @@
       <script>scripts\scr_reset_input.gml</script>
       <script>scripts\scr_menu.gml</script>
       <script>scripts\scr_player_input.gml</script>
+      <script>scripts\scr_resolution.gml</script>
     </scripts>
-    <script>scripts\scr_split_paragraph.gml</script>
+    <scripts name="Mechanics">
+      <script>scripts\scr_generate_word.gml</script>
+      <script>scripts\scr_next_word.gml</script>
+      <script>scripts\scr_split_paragraph.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
+    <font>fonts\fnt_menu</font>
     <font>fonts\fnt_text_bold</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_game_control</object>
-    <object>objects\obj_debug</object>
-    <object>objects\obj_gui</object>
-    <object>objects\obj_menu</object>
+    <objects name="Control">
+      <object>objects\obj_game_control</object>
+    </objects>
+    <objects name="Gui">
+      <object>objects\obj_gui</object>
+    </objects>
+    <objects name="Menu">
+      <object>objects\obj_menu</object>
+    </objects>
+    <objects name="Testing">
+      <object>objects\obj_debug</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
