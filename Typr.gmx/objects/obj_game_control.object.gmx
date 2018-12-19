@@ -32,6 +32,7 @@ state_machine_init();
 state_create("menu",scr_game_menu);
 state_create("classic",scr_game_classic);
 state_create("gibbrsh",scr_game_gibbrsh);
+state_create("scoreboard",scr_game_scoreboard);
 //Default State
 state_init("menu");
 </string>
@@ -56,6 +57,7 @@ state_init("menu");
             <kind>1</kind>
             <string>///Classic Mode Variables
 time_gain_classic = 0.3; //per letter
+initial_time_classic = 15; //initial time
 current_paragraph = 0;
 //Used for word numbering in paragraph
 word_index = 1;
@@ -63,6 +65,15 @@ word_index = 1;
 //Array of words for current paragraph
 words[0] = noone;
 current_word = 0; //array index
+paragraph_count = 0; //counter for nr of paragraphs completed
+//Limits for paragraph generation
+difficulty_changer_classic = 0;
+//[nr of paragrahps to get to, difficulty level]
+difficulty_ceiling_classic[0] = 2;
+difficulty_ceiling_classic[1] = 5;
+difficulty_ceiling_classic[2] = 8;
+
+
 </string>
           </argument>
         </arguments>
@@ -87,8 +98,7 @@ current_word = 0; //array index
 initial_time_gibbrsh = 10; //initial time for this mode
 
 time_gain_gibbrsh = 0.5; //per letter
-word_count = 0; //word count 
-letter_count_correct = 0; //letter count
+
 
 
 //Limits for word generation
@@ -112,13 +122,13 @@ comboer = 0;
 letter_combo[0, 0] = 0;
 letter_combo[0, 1] = 1.0;
 
-letter_combo[1, 0] = 10;
+letter_combo[1, 0] = 25;
 letter_combo[1, 1] = 1.5;
 
-letter_combo[2, 0] = 20;
+letter_combo[2, 0] = 35;
 letter_combo[2, 1] = 1.8;
 
-letter_combo[3, 0] = 30;
+letter_combo[3, 0] = 45;
 letter_combo[3, 1] = 2;
 
 //Difficulties
@@ -144,11 +154,44 @@ current_difficulty_gibbrsh = 0; //increasing difficulty level
           <argument>
             <kind>1</kind>
             <string>///Classic Mode Paragraphs
-paragraphs[0] = "You know you're in love when you can't fall asleep because reality is finally better than your dreams.";
-paragraphs[1] = "Wub wub wub wub wub wub wub, wub WUB wub wub.";
-paragraphs[2] = "The first casualty in a war is truth.";
-paragraphs[3] = "Meow Meow wake up.";
+//Academic
+academic[0, 0] = "The first two centuries of the Empire were a period of unprecedented stability and prosperity.";
+academic[0, 1] = "History of the Roman Empire";
+academic[0, 2] = 0;
 
+academic[1, 0] = "Lacedaemon was a mythical king of Laconia.";
+academic[1, 1] = "Mythology of Sparta";
+academic[1, 2] = 0;
+
+academic[2, 0] = "The Safavid Empire was the first Persian Empire established after the Arab conquest of Persia by Shah Ismail.";
+academic[2, 1] = "History of the Persian Empire";
+academic[2, 2] = 0;
+
+//Qutoes
+quotes[0, 0] = "Alea iacta est.";
+quotes[0, 1] = "Gaius Julius Caesar";
+quotes[0, 2] = 0;
+
+quotes[1, 0] = "Veni, vidi, vici.";
+quotes[1, 1] = "Gaius Julius Caesar";
+quotes[1, 2] = 0;
+
+quotes[2, 0] = "Si vis pacem, para bellum.";
+quotes[2, 1] = "Unknown";
+quotes[2, 2] = 0;
+
+//Artistic
+artistic[0, 0] = "That's it, that's it, that's it, that's it";
+artistic[0, 1] = "That's it - Bebe Rexha";
+artistic[0, 2] = 0;
+
+artistic[1, 0] = "Let's get lost tonight";
+artistic[1, 1] = "Stronger - Kanye West";
+artistic[1, 2] = 0;
+
+artistic[2, 0] = "All my people from the front to the back nod, back nod.";
+artistic[2, 1] = "Rap God - Eminem";
+artistic[2, 2] = 0;
 
 
 </string>
@@ -171,7 +214,7 @@ paragraphs[3] = "Meow Meow wake up.";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Inits
+            <string>///Variables for both modes
 //Randomize seed
 randomize()
 //Player Input
@@ -197,6 +240,26 @@ j = -1;
 ok = 1;
 z = -1;
 
+word_count = 0; //word count 
+letter_count_correct = 0; //letter count
+best_letter_count = 0; //best letter count
+//Combos
+comboer = 0;
+//[letter count, combo reward x score]
+letter_combo[0, 0] = 0;
+letter_combo[0, 1] = 1.0;
+
+letter_combo[1, 0] = 10;
+letter_combo[1, 1] = 1.5;
+
+letter_combo[2, 0] = 20;
+letter_combo[2, 1] = 1.8;
+
+letter_combo[3, 0] = 30;
+letter_combo[3, 1] = 2;
+
+//Colors
+color_combo = 0;
 
 </string>
           </argument>
@@ -218,24 +281,53 @@ z = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Auto-Resolution
-//Get native resolution
-/*
-if (window_get_fullscreen())
-{
-global.displayWidth = display_get_width();
-global.displayHeight = display_get_height();
-}
-else
-{
-global.displayWidth = window_get_width();
-global.displayHeight = window_get_height();
-}
-*/
-global.displayWidth = display_get_width();
-global.displayHeight = display_get_height();
-//Set it
-scr_resolution(global.displayWidth, global.displayHeight);
+            <string>///Final stats on a run
+final_score = 0;
+final_combo = 0;
+final_words = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Colors
+//Correct text colors
+text_colors[0] = make_color_rgb(255,193,6);
+text_colors[1] = make_color_rgb(6,68,255);
+
+bg_colors[0, 0] = make_color_rgb(8,48,69);
+bg_colors[0, 1] = c_white;
+bg_colors[0, 2] = text_colors[0];
+bg_colors[1, 0] = make_color_rgb(241,243,244);
+bg_colors[1, 1] = c_black;
+bg_colors[1, 2] = text_colors[1];
+bg_colors[2, 0] = make_color_rgb(181,197,136);
+bg_colors[2, 1] = c_white;
+bg_colors[2, 2] = text_colors[0];
+bg_colors[3, 0] = make_color_rgb(229,222,214);
+bg_colors[3, 1] = c_black;
+bg_colors[3, 2] = text_colors[1];
+bg_colors[4, 0] = c_black;
+bg_colors[4, 1] = c_white;
+bg_colors[4, 2] = text_colors[0];
+bg_colors[5, 0] = make_color_rgb(16,120,149);
+bg_colors[5, 1] = c_white;
+bg_colors[5, 2] = text_colors[0];
 </string>
           </argument>
         </arguments>

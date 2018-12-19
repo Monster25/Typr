@@ -4,8 +4,21 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sounds name="sound">
+    <sounds name="Main Menu">
+      <sound>sound\snd_altray_logo</sound>
+      <sound>sound\snd_menu_01</sound>
+      <sound>sound\snd_menu_02</sound>
+      <sound>sound\snd_test</sound>
+      <sound>sound\snd_test2</sound>
+    </sounds>
+  </sounds>
+  <sprites name="sprites">
+    <sprites name="Main Menu">
+      <sprite>sprites\spr_logo_company</sprite>
+      <sprite>sprites\spr_logo</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -23,45 +36,65 @@
       <script>scripts\scr_game_menu.gml</script>
       <script>scripts\scr_game_classic.gml</script>
       <script>scripts\scr_game_gibbrsh.gml</script>
+      <script>scripts\scr_game_scoreboard.gml</script>
     </scripts>
     <scripts name="Functionality">
       <script>scripts\scr_reset_input.gml</script>
       <script>scripts\scr_menu.gml</script>
       <script>scripts\scr_player_input.gml</script>
       <script>scripts\scr_resolution.gml</script>
+      <script>scripts\scr_fade_outin.gml</script>
+      <script>scripts\scr_random_bg_color.gml</script>
     </scripts>
     <scripts name="Mechanics">
       <script>scripts\scr_generate_word.gml</script>
       <script>scripts\scr_next_word.gml</script>
       <script>scripts\scr_split_paragraph.gml</script>
+      <script>scripts\scr_generate_paragraph.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
     <font>fonts\fnt_menu</font>
+    <font>fonts\fnt_menu_big</font>
     <font>fonts\fnt_text_bold</font>
   </fonts>
   <objects name="objects">
     <objects name="Control">
       <object>objects\obj_game_control</object>
+      <object>objects\obj_fade_outin</object>
+      <object>objects\obj_audiogroup_load</object>
+      <object>objects\obj_sound</object>
     </objects>
     <objects name="Gui">
       <object>objects\obj_gui</object>
+      <object>objects\obj_scoreboard</object>
     </objects>
     <objects name="Menu">
       <object>objects\obj_menu</object>
+      <object>objects\obj_menu_animations</object>
+      <object>objects\obj_altray_logo</object>
     </objects>
     <objects name="Testing">
       <object>objects\obj_debug</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_black</room>
+    <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_level</room>
+    <room>rooms\rm_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="ambience"/>
+    <audiogroup name="music"/>
+    <audiogroup name="soundeffects"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>

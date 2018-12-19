@@ -31,10 +31,41 @@ menu[1] = "Gibbrsh";
 menu[2] = "Quit";
 space = 80;
 mpos = 0;
+logo = "";
 pushed = 0;
 
+alarm[0] = 0.53*room_speed;
+blinker = "|";
 
 
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (blinker == "|")
+blinker = "";
+else if (blinker == "")
+blinker = "|";
+alarm[0] = 0.53*room_speed;
 </string>
           </argument>
         </arguments>
@@ -64,9 +95,12 @@ move += max(keyboard_check_pressed(vk_down),0);
 
 if (move != 0)
 {
+    blinker = "|";
+    alarm[0] = 0.53*room_speed;
     //Play sound
-    //scr_play_sound(obj_sound.button_move);
+    audio_play_sound(obj_sound.menu_move,1,0);
     mpos += move;
+    
     if (mpos &lt; 0)
     mpos = array_length_1d(menu) - 1;
     if (mpos &gt; array_length_1d(menu) - 1)
@@ -79,7 +113,7 @@ if (push == 1 &amp;&amp; pushed == 0)
 {
 pushed = 1;
 //Play sound
-//scr_play_sound(obj_sound.button_push);
+audio_play_sound(obj_sound.menu_push,1,0);
 scr_menu();
 }
 </string>
@@ -87,7 +121,7 @@ scr_menu();
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -107,14 +141,23 @@ scr_menu();
             <string>///Draw menu 
 draw_set_font(fnt_menu)
 draw_set_halign(fa_center)
+draw_set_color(c_white);
 //draw_set_valign(fa_middle);
 //Title
-draw_text(global.displayWidth/2,0,"Typr");
+if (instance_exists(obj_game_control))
+draw_set_color(obj_game_control.text_colors[0])
+draw_set_font(fnt_text_bold);
+logo = "Typr.";
+draw_text(global.displayWidth/2,0+string_height("Typr.")/3,"Typr.");
+//draw_text(global.displayWidth/2,0,"Typr");
 //Menu choices
-draw_text(global.displayWidth/2,global.displayHeight/3,"Classic");
-draw_text(global.displayWidth/2,global.displayHeight/2,"Gibbrsh");
-draw_text(global.displayWidth/2,global.displayHeight/1.5,"Quit");
-draw_rectangle(300,500+100*mpos,350,550+100*mpos,0);
+draw_set_color(c_white);
+draw_set_font(fnt_menu);
+
+draw_text(global.displayWidth/2,global.displayHeight/2.3,"Classic");
+draw_text(global.displayWidth/2,global.displayHeight/2.3+string_height("Classic")*1.6,"Gibbrsh");
+draw_text(global.displayWidth/2,global.displayHeight/2.3+string_height("Classic")*3.2,"Quit");
+draw_text(global.displayWidth/2+string_width(menu[mpos])/2+10,global.displayHeight/2.3+string_height("Classic")*1.6*mpos-5,blinker);
 
 </string>
           </argument>

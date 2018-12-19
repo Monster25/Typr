@@ -1,0 +1,84 @@
+var hjaelp;
+var popup;
+var pdf;
+var slsp;
+
+if ((screen.width == 640) && (screen.height == 480)) {
+  var w1 = 630; var h1 = 315; var l1 = 0; var t1 = 20;
+} else if ((screen.width == 800) && (screen.height == 600)) {
+  var w1 = 630; var h1 = 355; var l1 = 20; var t1 = 20;
+} else { // ((screen.width >= 1024) && (screen.height >= 768))
+  var w1 = 800; var h1 = 600; var l1 = 20; var t1 = 20;
+}
+
+function aabn_hjaelp_vindue(file) {
+    var krom = "width="+w1+",height="+h1+",left="+l1+",top="+t1+",scrollbars=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes";
+    hjaelp = window.open(hjaelp_mappe+file,'Hjaelp',krom);
+    if (window.focus) {hjaelp.focus();}    
+	}
+
+function popupvindue(file) {
+    var krom = "width="+w1+",height="+h1+",left="+l1+",top="+t1+",scrollbars=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes";
+    popup = window.open(file,'Popup',krom);
+    if (window.focus) {popup.focus();}    
+	}
+
+function aabnPdfAdvarsel(blknr, registmp, uid) {
+	   var conf = confirm(pdftext);
+	   if(!conf) {
+	     return false;
+	   } else {
+		    if (!indlaest) {
+		        meddelelse_om_indlaesning();
+		      } else {
+		        var file1 = resource + "html/side_indlaeses.htm";
+		        var file2 = context + "/VisPdf.do?uid=" + uid;
+		        var krom = "width="+w1+",height="+h1+",left="+l1+",top="+t1+",scrollbars=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes";
+		        pdf = window.open(file1,'Pdf',krom);
+		        document.pdf.blknr.value=blknr;
+		        document.pdf.registmp.value=registmp;
+		        document.pdf.action=file2;
+		        document.pdf.submit();
+		        pdf.focus();
+		      }
+	   }
+}
+
+function aabnPdf(blknr, registmp, uid) {
+    if (!indlaest) {
+        meddelelse_om_indlaesning();
+      } else {
+        var file1 = resource + "html/side_indlaeses.htm";
+        var file2 = context + "/VisPdf.do?uid=" + uid;
+        var krom = "width="+w1+",height="+h1+",left="+l1+",top="+t1+",scrollbars=yes,menubar=yes,toolbar=yes,status=yes,resizable=yes";
+        pdf = window.open(file1,'Pdf',krom);
+        document.pdf.blknr.value=blknr;
+        document.pdf.registmp.value=registmp;
+        document.pdf.action=file2;
+        document.pdf.submit();
+        pdf.focus();
+      }
+}
+
+function aabn_slsp_vindue(file2) {
+  if (!indlaest) {
+    meddelelse_om_indlaesning();
+  }
+  else if (slsp && slsp.open && !slsp.closed) {
+    slsp.window.focus();
+    slsp.moveTo(l1,t1);
+  }
+  else {
+    var side_indlaeses = resource + "html/side_indlaeses.htm";
+    var krom = "width="+w1+",height="+h1+",left="+l1+",top="+t1+",scrollbars=yes,menubar=yes,status=yes,resizable=yes";
+    slsp = window.open(side_indlaeses,'Slsp',krom);
+    document.slsp.action=file2;
+    document.slsp.submit();
+    slsp.focus();
+  }
+}
+
+
+
+
+

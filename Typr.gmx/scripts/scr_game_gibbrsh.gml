@@ -8,12 +8,19 @@ if (state_new)
     best_score = 0;
     word_count = 0;
     letter_count_correct = 0;
+    best_letter_count = 0;
     current_difficulty_gibbrsh = 0;
     limiter = 0;
     comboer = 0;
+    //Reset scoreboard vars
+    final_words = 0;
+    final_combo = 0;
+    final_score = 0;
     //Reset misc vars
     i = -1;
     j = -1;
+    ok = 1;
+    z = -1;
     //Generate display word
     display_word = scr_generate_word(letter_limits[limiter,0],letter_limits[limiter,1],limiter);
     //Set timer
@@ -25,17 +32,24 @@ scr_player_input();
 //Escape to go back to menu
 if (esc)
 {
+if (room_exists(asset_get_index("rm_menu")))
+{
+room_goto(asset_get_index("rm_menu"));
 state_switch("menu");
-if (room_exists(room_previous(room)))
-room_goto_previous();
+}
 }
 
-//If time is up go back to menu
+//If time is up go to scoreboard
 if (time <= 0)
 {
-state_switch("menu");
-if (room_exists(room_previous(room)))
-room_goto_previous();
+final_combo = best_letter_count;
+final_words = word_count;
+final_score = best_score;
+if(room_exists(room_next(room)))
+{
+room_goto_next();
+state_switch("scoreboard");
+}
 }
 
 //Player input update
@@ -44,11 +58,10 @@ room_goto_previous();
 //Time moving
 time-=1/room_speed;
 
-//Combo checker
+//Letter Combo checker
 if (color == c_red)
 {
 comboer = 0;
-correct_string = "";
 letter_count_correct = 0;
 ok = 0;
 }
@@ -56,6 +69,8 @@ else if (color == c_green && ok == 1)
 {
 z = string_length(player_input);
 letter_count_correct += 1;
+if (letter_count_correct > best_letter_count)
+best_letter_count = letter_count_correct;
 ok = 0;
 }
 

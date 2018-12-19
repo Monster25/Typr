@@ -9,3 +9,5 @@ if (!window_get_fullscreen()) //If you're not in fullscreen
 }
 
 surface_resize(application_surface, global.displayWidth, global.displayHeight); //resize application surface
+
+

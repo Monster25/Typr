@@ -1,0 +1,121 @@
+var indlaest = false;
+var revisor_kaldt = false;
+
+function skiftDocument(blknr, registmp, uid) {
+	document.opgoer.blknr.value = blknr;
+	document.opgoer.registmp.value = registmp;
+	document.opgoer.uid.value = uid;
+	check_send_side('opgoer');
+}
+
+function skiftDocumentB() {
+	var key = $('#sktsBottomSelect').val();
+	$('#sktsBottomSelect').val('');
+	$('#sktsVersionBt').addClass('hidden');
+
+	var type = key.substring(0, 1);
+	if (type == "H") {
+		skiftDocument(key.substring(1, 5), key.substring(5, 31), key.substring(31, 51));
+	} else {
+		aabnPdfAdvarsel(key.substring(1, 5), key.substring(5, 31), key.substring(31, 51));
+	}
+}
+
+function skiftAar(indkaar) {
+	document.aar.indkaar.value = indkaar;
+	check_send_side('aar');
+}
+
+function tidlAar() {
+	check_send_side('tidlaar');
+}
+
+function gem() {
+	check_send_side('kontakt');
+}
+
+function senere() {
+	document.opgoer.kontakt.value = "N";
+	check_send_side('opgoer');
+}
+
+function fortsaet() {
+	check_send_side('opgoer');
+}
+
+function godkendForslag() {
+	check_send_side('godkend');
+}
+
+function afvisForslag() {
+	   var conf = confirm(afvistext);
+	   if(!conf) {
+	     return false;
+	   } else {
+			check_send_side('afvis');
+	   }
+}
+
+function retOpgoer() {
+	check_send_side('retopgoer');
+}
+
+function betalNu() {
+	check_send_side('betal');
+}
+
+function kald_revisor() {
+	if (!indlaest) {
+		meddelelseOmIndlaesning();
+	} else {
+		document.revisor.submit();
+	}
+}
+
+function fokus_iframe(id) {
+	var el = document.getElementById(id).offsetParent;
+	var el_hoejde = document.getElementById(id).height;
+	var y_position = null;
+	while (el != null) {
+		y_position += el.offsetTop;
+		el = el.offsetParent;
+	}
+	var el_synlig = document.body.scrollTop + document.body.clientHeight
+			- y_position;
+	if (el_synlig < el_hoejde) {
+		el_rul = el_hoejde - el_synlig;
+		scrollBy(0, el_rul);
+	}
+}
+
+function check_send_side(navn) {
+	if (!indlaest) {
+		meddelelse_om_indlaesning();
+	} else {
+		deaktiver_knapper();
+		document.forms[navn].submit();
+	}
+}
+
+function deaktiver_knapper() {
+	obj = document.getElementsByTagName('input');
+	for (i = 0; i < obj.length; i++) {
+		if (obj[i].type == 'button') {
+			obj[i].disabled = true;
+		}
+		if (obj[i].type == 'submit') {
+			obj[i].disabled = true;
+		}
+	}
+}
+
+function meddelelse_om_indlaesning() {
+	alert(indlaestext);
+	return;
+}
+
+function start() {
+	indlaest = true;
+}
+
+window.onload = start;

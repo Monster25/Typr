@@ -8,6 +8,90 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Typing blinker animation
+blinker = "|";
+alarm[0] = 0.53*room_speed;
+checker = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Blinker
+if (blinker == "|")
+blinker = " ";
+else if (blinker == " ")
+blinker = "|";
+alarm[0] = 0.53*room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check for modifications
+//Typing blinker animation
+if (checker !=  string_length(keyboard_string))
+{
+checker = string_length(keyboard_string);
+blinker = "|";
+alarm[0] = 0.53*room_speed;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -26,8 +110,10 @@
           <argument>
             <kind>1</kind>
             <string>///Draw basic info
-draw_set_color(c_white);
-draw_set_halign(fa_center);
+if (instance_exists(obj_game_control))
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
+
+//draw_set_halign(fa_center);
 //draw_set_valign(fa_middle);
 draw_set_font(fnt_text);
 
@@ -43,10 +129,12 @@ for (var i = 0;i&lt;array_length_1d(obj_game_control.words);i++)
 {
 
 if (i == obj_game_control.current_word)
-    draw_set_font(fnt_text_bold);
+    draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,2]);
+    //draw_set_font(fnt_text_bold);
 else
-    draw_set_font(fnt_text);
+    draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1])
 
+   
 draw_text(global.displayWidth/15+100*i,global.displayHeight/2, obj_game_control.words[i]);
 }
 }
@@ -54,11 +142,19 @@ draw_text(global.displayWidth/15+100*i,global.displayHeight/2, obj_game_control.
 else
 draw_text(global.displayWidth/2, global.displayHeight/2, obj_game_control.display_word);
 
-draw_text(global.displayWidth/2, global.displayHeight/2+200, obj_game_control.player_input);
+draw_text(global.displayWidth/2, global.displayHeight/2+200, obj_game_control.player_input+blinker);
+//var display = string_insert(blinker,obj_game_control.player_input,string_char_at(obj_game_control.player_input,string_length(obj_game_control.player_input)));
+//draw_text(global.displayWidth/2+string_width(obj_game_control.player_input), global.displayHeight/2+200,blinker);
+//draw_text(global.displayWidth/2, global.displayHeight/2+200, display);
 
 ///draw color for checking word
-draw_rectangle_color(200,200,240,240,obj_game_control.color,obj_game_control.color,obj_game_control.color,obj_game_control.color,0);
+draw_rectangle_color(350,200,440,240,obj_game_control.color,obj_game_control.color,obj_game_control.color,obj_game_control.color,0);
 
+//Display misc info
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1])
+draw_text(200,200,obj_game_control.word_count);
+draw_text(200,250,obj_game_control.letter_count_correct);
+draw_text(200,300,obj_game_control.letter_combo[obj_game_control.comboer,1]);
 </string>
           </argument>
         </arguments>
