@@ -36,7 +36,8 @@ draw_text(200,250,"On what combo are you?: "+string(obj_game_control.comboer)+" 
 draw_text(200,300,"Current difficulty gibbrsh: "+string(obj_game_control.limiter));
 draw_text(200,350,"Paragraph count: "+string(obj_game_control.paragraph_count));
 draw_text(200,400,"Curent difficulty classic: "+string(obj_game_control.difficulty_changer_classic))
-
+draw_text(200,500,"Time: "+string(obj_game_control.time));
+draw_text(200,1000,"Color id: "+string(obj_game_control.color_combo));
 </string>
           </argument>
         </arguments>

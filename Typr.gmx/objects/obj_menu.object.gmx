@@ -141,17 +141,17 @@ scr_menu();
             <string>///Draw menu 
 draw_set_font(fnt_menu)
 draw_set_halign(fa_center)
-draw_set_color(c_white);
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 //draw_set_valign(fa_middle);
 //Title
 if (instance_exists(obj_game_control))
-draw_set_color(obj_game_control.text_colors[0])
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,2]);
 draw_set_font(fnt_text_bold);
 logo = "Typr.";
 draw_text(global.displayWidth/2,0+string_height("Typr.")/3,"Typr.");
 //draw_text(global.displayWidth/2,0,"Typr");
 //Menu choices
-draw_set_color(c_white);
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 draw_set_font(fnt_menu);
 
 draw_text(global.displayWidth/2,global.displayHeight/2.3,"Classic");

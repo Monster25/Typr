@@ -1,6 +1,7 @@
 //Player starts new mode
 if (state_new)
 {
+
     //Reset vars
     scr_reset_input(player_input);
     display_word = "";
@@ -13,6 +14,8 @@ if (state_new)
     paragraph_count = 0;
     comboer = 0;
     difficulty_changer_classic = 0;
+    color_combo = scr_random_bg_color(bg_colors);
+    background_color = bg_colors[color_combo,0];
     //Reset scoreboard vars
     final_words = 0;
     final_combo = 0;
@@ -38,12 +41,15 @@ scr_player_input();
 //Escape to go back go to menu
 if (esc)
 {
-if (room_exists(asset_get_index("rm_menu")))
-{
+//if (room_exists(asset_get_index("rm_menu")))
+//{
 room_goto(asset_get_index("rm_menu"));
 state_switch("menu");
+//}
 }
-}
+
+//Time moving
+time-=1/room_speed;
 
 //If time is up go to scoreboard
 if (time <= 0)
@@ -61,8 +67,7 @@ state_switch("scoreboard");
 //Player input update
 //player_input = keyboard_string;
 
-//Time moving
-time-=1/room_speed;
+
 
 //Letter Combo checker
 if (color == c_red)

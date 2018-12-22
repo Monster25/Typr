@@ -73,6 +73,9 @@ difficulty_ceiling_classic[0] = 2;
 difficulty_ceiling_classic[1] = 5;
 difficulty_ceiling_classic[2] = 8;
 
+//Sentence for display
+full_sentence = "";
+
 
 </string>
           </argument>
@@ -180,6 +183,10 @@ quotes[2, 0] = "Si vis pacem, para bellum.";
 quotes[2, 1] = "Unknown";
 quotes[2, 2] = 0;
 
+quotes[3, 0] = "Yes, easy.";
+quotes[3, 1] = "cacat;";
+quotes[3, 2] = 0;
+
 //Artistic
 artistic[0, 0] = "That's it, that's it, that's it, that's it";
 artistic[0, 1] = "That's it - Bebe Rexha";
@@ -245,18 +252,22 @@ letter_count_correct = 0; //letter count
 best_letter_count = 0; //best letter count
 //Combos
 comboer = 0;
-//[letter count, combo reward x score]
+//[letter count, combo reward x score x actual level]
 letter_combo[0, 0] = 0;
 letter_combo[0, 1] = 1.0;
+letter_combo[0, 2] = 0;
 
 letter_combo[1, 0] = 10;
 letter_combo[1, 1] = 1.5;
+letter_combo[1, 2] = 1;
 
 letter_combo[2, 0] = 20;
 letter_combo[2, 1] = 1.8;
+letter_combo[2, 2] = 2;
 
 letter_combo[3, 0] = 30;
 letter_combo[3, 1] = 2;
+letter_combo[3, 2] = 3;
 
 //Colors
 color_combo = 0;
@@ -307,27 +318,147 @@ final_words = 0;
             <kind>1</kind>
             <string>///Colors
 //Correct text colors
-text_colors[0] = make_color_rgb(255,193,6);
-text_colors[1] = make_color_rgb(6,68,255);
+text_colors[0] = make_color_rgb(255,193,6); // Orange
+text_colors[1] = make_color_rgb(6,68,255); //blue
 
+//Dark Bg
 bg_colors[0, 0] = make_color_rgb(8,48,69);
 bg_colors[0, 1] = c_white;
 bg_colors[0, 2] = text_colors[0];
-bg_colors[1, 0] = make_color_rgb(241,243,244);
-bg_colors[1, 1] = c_black;
-bg_colors[1, 2] = text_colors[1];
-bg_colors[2, 0] = make_color_rgb(181,197,136);
+
+bg_colors[1, 0] = c_black;
+bg_colors[1, 1] = c_white;
+bg_colors[1, 2] = text_colors[0];
+
+bg_colors[2, 0] = make_color_rgb(16,120,149);
 bg_colors[2, 1] = c_white;
 bg_colors[2, 2] = text_colors[0];
-bg_colors[3, 0] = make_color_rgb(229,222,214);
-bg_colors[3, 1] = c_black;
-bg_colors[3, 2] = text_colors[1];
-bg_colors[4, 0] = c_black;
+
+bg_colors[3, 0] = make_color_rgb(16, 55, 106);
+bg_colors[3, 1] = c_white;
+bg_colors[3, 2] = text_colors[0];
+
+bg_colors[4, 0] = make_color_rgb(65, 37, 106);
 bg_colors[4, 1] = c_white;
 bg_colors[4, 2] = text_colors[0];
-bg_colors[5, 0] = make_color_rgb(16,120,149);
+
+bg_colors[5, 0] = make_color_rgb(65, 37, 67);
 bg_colors[5, 1] = c_white;
 bg_colors[5, 2] = text_colors[0];
+
+bg_colors[6, 0] = make_color_rgb(65, 64, 67);
+bg_colors[6, 1] = c_white;
+bg_colors[6, 2] = text_colors[0];
+
+bg_colors[7, 0] = make_color_rgb(15, 64, 67);
+bg_colors[7, 1] = c_white;
+bg_colors[7, 2] = text_colors[0];
+
+bg_colors[8, 0] = make_color_rgb(82, 38, 91);
+bg_colors[8, 1] = c_white;
+bg_colors[8, 2] = text_colors[0];
+
+bg_colors[9, 0] = make_color_rgb(26, 84, 13);
+bg_colors[9, 1] = c_white;
+bg_colors[9, 2] = text_colors[0];
+
+bg_colors[10, 0] = make_color_rgb(72, 84, 13);
+bg_colors[10, 1] = c_white;
+bg_colors[10, 2] = text_colors[0];
+
+bg_colors[11, 0] = make_color_rgb(0, 77, 59);
+bg_colors[11, 1] = c_white;
+bg_colors[11, 2] = text_colors[0];
+
+bg_colors[12, 0] = make_color_rgb(136, 36, 59);
+bg_colors[12, 1] = c_white;
+bg_colors[12, 2] = text_colors[0];
+
+bg_colors[13, 0] = make_color_rgb(61, 103, 25);
+bg_colors[13, 1] = c_white;
+bg_colors[13, 2] = text_colors[0];
+
+bg_colors[14, 0] = make_color_rgb(67, 115, 127);
+bg_colors[14, 1] = c_white;
+bg_colors[14, 2] = text_colors[0];
+
+
+//Light bg
+bg_colors[15, 0] = make_color_rgb(241,243,244);
+bg_colors[15, 1] = c_black;
+bg_colors[15, 2] = text_colors[1];
+
+bg_colors[16, 0] = make_color_rgb(181,197,136);
+bg_colors[16, 1] = c_black;
+bg_colors[16, 2] = text_colors[1];
+
+bg_colors[17, 0] = make_color_rgb(229,222,214);
+bg_colors[17, 1] = c_black;
+bg_colors[17, 2] = text_colors[1];
+
+bg_colors[18, 0] = make_color_rgb(185, 142, 229);
+bg_colors[18, 1] = c_black;
+bg_colors[18, 2] = text_colors[1];
+
+bg_colors[19, 0] = make_color_rgb(206, 214, 229);
+bg_colors[19, 1] = c_black;
+bg_colors[19, 2] = text_colors[1];
+
+bg_colors[20, 0] = make_color_rgb(206, 214, 164);
+bg_colors[20, 1] = c_black;
+bg_colors[20, 2] = text_colors[1];
+
+bg_colors[21, 0] = make_color_rgb(236, 166, 164);
+bg_colors[21, 1] = c_black;
+bg_colors[21, 2] = text_colors[1];
+
+bg_colors[22, 0] = make_color_rgb(253, 246, 24);
+bg_colors[22, 1] = c_black;
+bg_colors[22, 2] = text_colors[1];
+
+bg_colors[23, 0] = make_color_rgb(178, 181, 201);
+bg_colors[23, 1] = c_black;
+bg_colors[23, 2] = text_colors[1];
+
+bg_colors[24, 0] = make_color_rgb(230, 245, 236);
+bg_colors[24, 1] = c_black;
+bg_colors[24, 2] = text_colors[1];
+
+bg_colors[25, 0] = make_color_rgb(191, 186, 236);
+bg_colors[25, 1] = c_black;
+bg_colors[25, 2] = text_colors[1];
+
+bg_colors[26, 0] = make_color_rgb(241, 186, 236);
+bg_colors[26, 1] = c_black;
+bg_colors[26, 2] = text_colors[1];
+
+bg_colors[27, 0] = make_color_rgb(240, 166, 163);
+bg_colors[27, 1] = c_black;
+bg_colors[27, 2] = text_colors[1];
+
+bg_colors[28, 0] = make_color_rgb(183, 254, 253);
+bg_colors[28, 1] = c_black;
+bg_colors[28, 2] = text_colors[1];
+
+bg_colors[29, 0] = make_color_rgb(242, 172, 127);
+bg_colors[29, 1] = c_black;
+bg_colors[29, 2] = text_colors[1];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>

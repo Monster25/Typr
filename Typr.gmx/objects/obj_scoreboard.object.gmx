@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(global.displayWidth/2,global.displayHeight/2,"You ran out of time! Here are your stats:")
-
+            <string>draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
+draw_text(global.displayWidth/2,global.displayHeight/2,"You ran out of time! Here are your stats:")
 draw_text(global.displayWidth/2,global.displayHeight/2+50,"Total Words Typed: "+string(obj_game_control.final_words));
 draw_text(global.displayWidth/2,global.displayHeight/2+100,"Longest Correct Letter Combo: "+string(obj_game_control.final_combo));
-draw_text(global.displayWidth/2,global.displayHeight/2+150,"Final Score: "+string(obj_game_control.final_score));
+draw_text(global.displayWidth/2,global.displayHeight/2+150,"Final Score: "+string(floor(obj_game_control.final_score)));
 </string>
           </argument>
         </arguments>

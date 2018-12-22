@@ -30,6 +30,9 @@ message_end[1] = "dab?"
 message_end[2] = "pee?"
 message_end[3] = "dance?"
 message_end[4] = "drink?"
+message_end[5] = "run?"
+message_end[6] = "spam?"
+message_end[7] = "move?"
 message = "How fast can you " + message_end[0];
 
 full_message = message;
@@ -127,7 +130,7 @@ else { //if current character is more than the amount in the current message
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -149,7 +152,7 @@ draw_set_font(fnt_text)
 draw_set_halign(fa_left)
 //draw_text(global.displayWidth/2,0+sprite_get_height(spr_logo)*0.25, message_draw); //draw the text at the coordinates
 
-draw_set_color(c_white);
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 draw_text(global.displayWidth/2-string_width(obj_menu.logo)*2.150,0+string_height(obj_menu.logo)*7,message_draw);
 </string>
           </argument>

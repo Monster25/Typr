@@ -21,6 +21,9 @@ if (state_new)
     j = -1;
     ok = 1;
     z = -1;
+    //Colors
+    color_combo = scr_random_bg_color(bg_colors);
+    background_color = bg_colors[color_combo,0];
     //Generate display word
     display_word = scr_generate_word(letter_limits[limiter,0],letter_limits[limiter,1],limiter);
     //Set timer
@@ -106,6 +109,9 @@ comboer++;
 //Correct word
 if (player_input == display_word)
 {
+//Change bg color
+color_combo = scr_random_bg_color(bg_colors);
+background_color = bg_colors[color_combo,0];
 //Add word count
 word_count++;
 //Reset input and true input
