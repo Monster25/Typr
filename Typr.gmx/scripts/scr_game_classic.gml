@@ -94,6 +94,7 @@ color = c_white;
 
 if (j == -1 && string_length(player_input)>0 && string_char_at(player_input,string_length(player_input))!=string_char_at(display_word,string_length(player_input)))
 {
+audio_play_sound(obj_sound.incorrect_word,1,0)
 color = c_red;
 j = string_length(player_input)-1;
 }
@@ -113,6 +114,14 @@ comboer++;
 //Correct word
 if (player_input == display_word)
 {
+//Sound effect
+
+//audio_sound_pitch(obj_sound.correct_word,1.5);
+if (current_word != array_length_1d(words)-1)
+{
+var sound = audio_play_sound(obj_sound.correct_word,1,0);
+audio_sound_pitch(sound,1+((current_word)/30));
+}
 //Add word count
 word_count++;
 //Reset input and true input
@@ -139,6 +148,8 @@ background_color = bg_colors[color_combo,0];
 paragraph_count++;
 //reset current word
 current_word = 0;
+//Sound effect
+audio_play_sound(obj_sound.correct_paragraph,1,0);
 //generate paragraph
 current_paragraph = scr_generate_paragraph(difficulty_changer_classic);
 //Split paragraph into an array of words

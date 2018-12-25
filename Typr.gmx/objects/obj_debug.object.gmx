@@ -29,6 +29,7 @@
 //draw_text(250,100,string(global.displayWidth)+" "+string(global.displayHeight))
 draw_set_font(fnt_text)
 
+/*
 draw_text(200,100,"Word count: "+string(obj_game_control.word_count));
 draw_text(200,150,"Word formation limits: "+string(obj_game_control.letter_limits[obj_game_control.limiter,0])+" "+string(obj_game_control.letter_limits[obj_game_control.limiter,1]))
 draw_text(200,200,"How many correct letters in a row: "+string(obj_game_control.letter_count_correct));
@@ -37,6 +38,7 @@ draw_text(200,300,"Current difficulty gibbrsh: "+string(obj_game_control.limiter
 draw_text(200,350,"Paragraph count: "+string(obj_game_control.paragraph_count));
 draw_text(200,400,"Curent difficulty classic: "+string(obj_game_control.difficulty_changer_classic))
 draw_text(200,500,"Time: "+string(obj_game_control.time));
+*/
 draw_text(200,1000,"Color id: "+string(obj_game_control.color_combo));
 </string>
           </argument>

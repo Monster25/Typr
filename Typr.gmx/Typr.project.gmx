@@ -12,6 +12,12 @@
       <sound>sound\snd_test</sound>
       <sound>sound\snd_test2</sound>
     </sounds>
+    <sounds name="Gameplay">
+      <sound>sound\snd_correct_02</sound>
+      <sound>sound\snd_correct_01</sound>
+      <sound>sound\snd_correct_03</sound>
+      <sound>sound\snd_incorrect_01</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Main Menu">

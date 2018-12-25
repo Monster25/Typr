@@ -57,7 +57,7 @@ state_init("menu");
             <kind>1</kind>
             <string>///Classic Mode Variables
 time_gain_classic = 0.3; //per letter
-initial_time_classic = 15; //initial time
+initial_time_classic = 1000; //initial time
 current_paragraph = 0;
 //Used for word numbering in paragraph
 word_index = 1;
@@ -158,45 +158,49 @@ current_difficulty_gibbrsh = 0; //increasing difficulty level
             <kind>1</kind>
             <string>///Classic Mode Paragraphs
 //Academic
-academic[0, 0] = "The first two centuries of the Empire were a period of unprecedented stability and prosperity.";
+academic[0, 0] = "Stefan cel Mare este considerat o personalitate marcanta a istoriei Romaniei.";
 academic[0, 1] = "History of the Roman Empire";
 academic[0, 2] = 0;
 
-academic[1, 0] = "Lacedaemon was a mythical king of Laconia.";
+academic[1, 0] = "Palatul Culturii a fost renovat recent.";
 academic[1, 1] = "Mythology of Sparta";
 academic[1, 2] = 0;
 
-academic[2, 0] = "The Safavid Empire was the first Persian Empire established after the Arab conquest of Persia by Shah Ismail.";
+academic[2, 0] = "Ne-am luat vacanta mai devreme ca deobicei.";
 academic[2, 1] = "History of the Persian Empire";
 academic[2, 2] = 0;
 
 //Qutoes
-quotes[0, 0] = "Alea iacta est.";
+quotes[0, 0] = "Ana are mere.";
 quotes[0, 1] = "Gaius Julius Caesar";
 quotes[0, 2] = 0;
 
-quotes[1, 0] = "Veni, vidi, vici.";
+quotes[1, 0] = "Canapeaua este foarte comfortabila.";
 quotes[1, 1] = "Gaius Julius Caesar";
 quotes[1, 2] = 0;
 
-quotes[2, 0] = "Si vis pacem, para bellum.";
+quotes[2, 0] = "Trebuie sa mergem la magazin.";
 quotes[2, 1] = "Unknown";
 quotes[2, 2] = 0;
 
-quotes[3, 0] = "Yes, easy.";
+quotes[3, 0] = "Cerul este albastru.";
 quotes[3, 1] = "cacat;";
 quotes[3, 2] = 0;
 
+quotes[3, 0] = "Dupa moartea lui Haci Ghirai a izbucnit lupta pentru tron intre fii hanului.";
+quotes[3, 1] = "cacat";
+quotes[3, 2] = 0;
+
 //Artistic
-artistic[0, 0] = "That's it, that's it, that's it, that's it";
+artistic[0, 0] = "Dupa moartea lui Haci Ghirai a izbucnit lupta pentru tron intre fii hanului.";
 artistic[0, 1] = "That's it - Bebe Rexha";
 artistic[0, 2] = 0;
 
-artistic[1, 0] = "Let's get lost tonight";
+artistic[1, 0] = "Hanatul Crimeii a fost cea mai importanta forta militara din Europa Rasariteana.";
 artistic[1, 1] = "Stronger - Kanye West";
 artistic[1, 2] = 0;
 
-artistic[2, 0] = "All my people from the front to the back nod, back nod.";
+artistic[2, 0] = "Mama face prajituri.";
 artistic[2, 1] = "Rap God - Eminem";
 artistic[2, 2] = 0;
 
@@ -358,7 +362,7 @@ bg_colors[8, 0] = make_color_rgb(82, 38, 91);
 bg_colors[8, 1] = c_white;
 bg_colors[8, 2] = text_colors[0];
 
-bg_colors[9, 0] = make_color_rgb(26, 84, 13);
+bg_colors[9, 0] = make_color_rgb(68, 5, 7);
 bg_colors[9, 1] = c_white;
 bg_colors[9, 2] = text_colors[0];
 
@@ -374,7 +378,7 @@ bg_colors[12, 0] = make_color_rgb(136, 36, 59);
 bg_colors[12, 1] = c_white;
 bg_colors[12, 2] = text_colors[0];
 
-bg_colors[13, 0] = make_color_rgb(61, 103, 25);
+bg_colors[13, 0] = make_color_rgb(28, 109, 103);
 bg_colors[13, 1] = c_white;
 bg_colors[13, 2] = text_colors[0];
 

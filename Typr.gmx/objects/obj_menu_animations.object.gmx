@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>message_end[0] = "type?"
 message_end[1] = "dab?"
-message_end[2] = "pee?"
+message_end[2] = "talk?"
 message_end[3] = "dance?"
 message_end[4] = "drink?"
 message_end[5] = "run?"
-message_end[6] = "spam?"
+message_end[6] = "cut?"
 message_end[7] = "move?"
 message = "How fast can you " + message_end[0];
 

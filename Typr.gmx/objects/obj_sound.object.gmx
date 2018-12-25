@@ -28,6 +28,9 @@
             <string>///Sounds
 menu_move = snd_menu_01;
 menu_push = snd_menu_02;
+correct_word = snd_correct_01;
+correct_paragraph = snd_correct_03;
+incorrect_word = snd_incorrect_01;
 </string>
           </argument>
         </arguments>
