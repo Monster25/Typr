@@ -86,6 +86,7 @@ color = c_white;
 
 if (j == -1 && string_length(player_input)>0 && string_char_at(player_input,string_length(player_input))!=string_char_at(display_word,string_length(player_input)))
 {
+audio_play_sound(obj_sound.incorrect_word,1,0)
 color = c_red;
 j = string_length(player_input)-1;
 }
@@ -109,6 +110,8 @@ comboer++;
 //Correct word
 if (player_input == display_word)
 {
+//Sound effect
+audio_play_sound(obj_sound.correct_paragraph,1,0);
 //Change bg color
 color_combo = scr_random_bg_color(bg_colors);
 background_color = bg_colors[color_combo,0];

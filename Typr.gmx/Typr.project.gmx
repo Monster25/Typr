@@ -61,6 +61,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
+    <font>fonts\fnt_text_italic</font>
     <font>fonts\fnt_menu</font>
     <font>fonts\fnt_menu_big</font>
     <font>fonts\fnt_text_bold</font>

@@ -41,15 +41,12 @@ scr_player_input();
 //Escape to go back go to menu
 if (esc)
 {
-//if (room_exists(asset_get_index("rm_menu")))
-//{
+if (room_exists(asset_get_index("rm_menu")))
+{
 room_goto(asset_get_index("rm_menu"));
 state_switch("menu");
-//}
 }
-
-//Time moving
-time-=1/room_speed;
+}
 
 //If time is up go to scoreboard
 if (time <= 0)
@@ -63,6 +60,9 @@ room_goto_next();
 state_switch("scoreboard");
 }
 }
+
+//Time moving
+time-=1/room_speed;
 
 //Player input update
 //player_input = keyboard_string;
@@ -116,16 +116,16 @@ if (player_input == display_word)
 {
 //Sound effect
 
-//audio_sound_pitch(obj_sound.correct_word,1.5);
 if (current_word != array_length_1d(words)-1)
 {
 var sound = audio_play_sound(obj_sound.correct_word,1,0);
-audio_sound_pitch(sound,1+((current_word)/30));
+audio_sound_pitch(sound,1+((current_word)/45));
 }
 //Add word count
 word_count++;
 //Reset input and true input
 scr_reset_input(player_input);
+
 //Add score
 best_score+=time*letter_combo[comboer,1];
 //add gain to current time
