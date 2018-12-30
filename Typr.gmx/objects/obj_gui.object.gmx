@@ -119,11 +119,11 @@ draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 draw_set_font(fnt_text);
 draw_set_halign(fa_center);
 //Combo bar
-//var pc;
-//pc = (obj_game_control.letter_combo[obj_game_control.comboer,2]/obj_game_control.letter_combo[array_height_2d(obj_game_control.letter_combo)-1,2])*100;
-//draw_healthbar(global.displayWidth/2-100,global.displayHeight/2-global.displayHeight/5,global.displayWidth/2+100,global.displayHeight/2-global.displayHeight/5+30,pc,c_black,c_red,c_green,0,1,1);
+var pc;
+pc = obj_game_control.comboer/(array_height_2d(obj_game_control.letter_combo)-1)*100;
+draw_healthbar(global.displayWidth/2-100,global.displayHeight/2-global.displayHeight/5,global.displayWidth/2+100,global.displayHeight/2-global.displayHeight/5+8,pc,obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,2],obj_game_control.bg_colors[obj_game_control.color_combo,2],0,1,1);
 //Score and time
-draw_text(global.displayWidth/2,global.displayHeight/2-global.displayHeight/3, "Score: "+string(floor(obj_game_control.best_score))+"     Time: "+string(obj_game_control.time));
+scr_draw_text_outline(global.displayWidth/2,global.displayHeight/2-global.displayHeight/3, obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,1], "Score: "+string(floor(obj_game_control.best_score))+"     Time: "+string(obj_game_control.time));
 
 //draw_text(global.displayWidth/2-string_width("Time: ")/2,global.displayHeight/2-200, "Time: "+string(obj_game_control.time));
 
@@ -131,8 +131,8 @@ draw_text(global.displayWidth/2,global.displayHeight/2-global.displayHeight/3, "
 
 //Display sentence with words
 
-if (obj_game_control.state_name == "classic")
-{
+//if (obj_game_control.state_name == "classic")
+//{
 for (var i = 0;i&lt;array_length_1d(obj_game_control.words);i++)
 {
 //full_sentence += string(obj_game_control.words[i]);
@@ -150,7 +150,7 @@ else
 
 draw_set_halign(fa_left);
 //if(i&gt;0)
-draw_text(round(global.displayWidth/2-string_width(obj_game_control.current_paragraph)/2+distance),round(global.displayHeight/2),string(obj_game_control.words[i]));
+scr_draw_text_outline(round(global.displayWidth/2-string_width(obj_game_control.current_paragraph)/2+distance),round(global.displayHeight/2),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(), string(obj_game_control.words[i]));
 //else
 //draw_text(global.displayWidth/15,global.displayHeight/2,string(obj_game_control.words[i]));
 
@@ -161,27 +161,28 @@ distance += string_width(obj_game_control.words[i]);
 //distance = 0;
 }
 distance = 0;
-}
+//}
 
-else
-draw_text(global.displayWidth/2, global.displayHeight/2, obj_game_control.display_word);
+//else
+//draw_text(global.displayWidth/2, global.displayHeight/2, obj_game_control.display_word);
 
 ///draw color for checking word
 draw_set_halign(fa_left);
 draw_set_circle_precision(4);
-if (obj_game_control.state_name == "classic")
-{
+//if (obj_game_control.state_name == "classic")
+//{
 draw_circle_color(global.displayWidth/2-string_width(obj_game_control.current_paragraph)/2+relative_distance[obj_game_control.current_word]+string_width(obj_game_control.words[obj_game_control.current_word])/2-string_width(" "),global.displayHeight/2-string_height(obj_game_control.words[obj_game_control.current_word]),8,obj_game_control.color,obj_game_control.color,false)
 draw_circle_color(global.displayWidth/2-string_width(obj_game_control.current_paragraph)/2+relative_distance[obj_game_control.current_word]+string_width(obj_game_control.words[obj_game_control.current_word])/2-string_width(" "),global.displayHeight/2-string_height(obj_game_control.words[obj_game_control.current_word]),8,c_black,c_black,true)
-}
-else if (obj_game_control.state_name == "gibbrsh")
-{
-draw_circle_color(global.displayWidth/2,global.displayHeight/2-string_height(obj_game_control.display_word),8,obj_game_control.color,obj_game_control.color,false)
-draw_circle_color(global.displayWidth/2,global.displayHeight/2-string_height(obj_game_control.display_word),8,c_black,c_black,true)
-}
+//}
+//else if (obj_game_control.state_name == "gibbrsh")
+//{
+//draw_circle_color(global.displayWidth/2,global.displayHeight/2-string_height(obj_game_control.display_word),8,obj_game_control.color,obj_game_control.color,false)
+//draw_circle_color(global.displayWidth/2,global.displayHeight/2-string_height(obj_game_control.display_word),8,c_black,c_black,true)
+//}
 
 draw_set_halign(fa_center);
 draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
+//scr_draw_text_outline(global.displayWidth/2, global.displayHeight/2+200, obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,1], obj_game_control.player_input+blinker);
 draw_text(global.displayWidth/2, global.displayHeight/2+200, obj_game_control.player_input+blinker);
 //var display = string_insert(blinker,obj_game_control.player_input,string_char_at(obj_game_control.player_input,string_length(obj_game_control.player_input)));
 //draw_text(global.displayWidth/2+string_width(obj_game_control.player_input), global.displayHeight/2+200,blinker);

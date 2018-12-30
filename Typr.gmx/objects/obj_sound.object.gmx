@@ -28,9 +28,13 @@
             <string>///Sounds
 menu_move = snd_menu_01;
 menu_push = snd_menu_02;
-correct_word = snd_correct_02;
+correct_word = snd_correct_08;
 correct_paragraph = snd_correct_03;
 incorrect_word = snd_incorrect_01;
+music_01 = bg_02;
+
+//Control sound
+audio_group_set_gain(soundeffects,0.5,0);
 </string>
           </argument>
         </arguments>

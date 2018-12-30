@@ -6,6 +6,7 @@ if (state_new)
     scr_reset_input(player_input);
     display_word = "";
     time = 0;
+    real_time = 0;
     best_score = 0;
     best_letter_count = 0;
     letter_count_correct = 0;
@@ -34,6 +35,12 @@ if (state_new)
     display_word = words[current_word];
     //Set timer
     time = initial_time_classic;
+    
+    //Stop music
+    if (audio_is_playing(obj_sound.music_01))
+    audio_stop_sound(obj_sound.music_01);
+    
+    //audio_group_set_gain(soundeffects,0.5,0.1);
 }
 
 //Get Player input
@@ -63,6 +70,7 @@ state_switch("scoreboard");
 
 //Time moving
 time-=1/room_speed;
+real_time+=1/room_speed;
 
 //Player input update
 //player_input = keyboard_string;
@@ -94,7 +102,7 @@ color = c_white;
 
 if (j == -1 && string_length(player_input)>0 && string_char_at(player_input,string_length(player_input))!=string_char_at(display_word,string_length(player_input)))
 {
-audio_play_sound(obj_sound.incorrect_word,1,0)
+//audio_play_sound(obj_sound.incorrect_word,1,0)
 color = c_red;
 j = string_length(player_input)-1;
 }
@@ -104,11 +112,20 @@ color = c_green;
 j = -1;
 }
 
+
 if (string_length(player_input) <= j)
 j = -1;
 
-//Change combo when letter count gets high enough
-if (letter_count_correct >= letter_combo[comboer,0] && comboer<array_height_2d(letter_combo)-1)
+if (color == c_red && any_key && !bk_space)
+{
+if (!audio_is_playing(obj_sound.incorrect_word))
+//audio_stop_sound(obj_sound.incorrect_word);
+
+audio_play_sound(obj_sound.incorrect_word,1,0);
+}
+
+//Change combo when letter count ge ts high enough
+if (letter_count_correct > letter_combo[comboer,0] && comboer<array_height_2d(letter_combo)-1)
 comboer++;
 
 //Correct word

@@ -30,6 +30,8 @@ draw_text(global.displayWidth/2,global.displayHeight/2,"You ran out of time! Her
 draw_text(global.displayWidth/2,global.displayHeight/2+50,"Total Words Typed: "+string(obj_game_control.final_words));
 draw_text(global.displayWidth/2,global.displayHeight/2+100,"Longest Correct Letter Combo: "+string(obj_game_control.final_combo));
 draw_text(global.displayWidth/2,global.displayHeight/2+150,"Final Score: "+string(floor(obj_game_control.final_score)));
+draw_text(global.displayWidth/2,global.displayHeight/2+200,"Average WPM: "+string(round(obj_game_control.final_words/(obj_game_control.real_time/60))));
+draw_text(global.displayWidth/2,global.displayHeight/2+250,"Total Time Elapsed: "+string(obj_game_control.real_time));
 </string>
           </argument>
         </arguments>

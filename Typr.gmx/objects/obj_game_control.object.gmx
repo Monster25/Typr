@@ -56,8 +56,8 @@ state_init("menu");
           <argument>
             <kind>1</kind>
             <string>///Classic Mode Variables
-time_gain_classic = 0.3; //per letter
-initial_time_classic = 1000; //initial time
+time_gain_classic = 0.15; //per letter
+initial_time_classic = 20; //initial time
 current_paragraph = 0;
 //Used for word numbering in paragraph
 word_index = 1;
@@ -91,48 +91,39 @@ full_sentence = "";
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_game_control</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
             <string>///Gibrrsh Mode Variables
-initial_time_gibbrsh = 10; //initial time for this mode
+initial_time_gibbrsh = 20; //initial time for this mode
 
-time_gain_gibbrsh = 0.5; //per letter
+time_gain_gibbrsh = 0.45; //per letter
 
 
 
 //Limits for word generation
 limiter = 0;
-//[Lower limit, Higher Limit, nr of words to get to, difficulty level]
+//[Lower limit, Higher Limit, nr of paragraphs to get past it, lower limit of words in para, higher limit of words in para]
 letter_limits[0,0] = 3;
-letter_limits[0,1] = 6;
-letter_limits[0,2] = 15;
+letter_limits[0,1] = 8;
+letter_limits[0,2] = 2;
+letter_limits[0,3] = 3;
+letter_limits[0,4] = 6;
 
 letter_limits[1,0] = 5;
 letter_limits[1,1] = 8;
-letter_limits[1,2] = 30;
+letter_limits[1,2] = 4;
+letter_limits[1,3] = 4;
+letter_limits[1,4] = 7;
 
 letter_limits[2,0] = 8;
 letter_limits[2,1] = 14;
-letter_limits[2,2] = 45;
-
-//Combos
-comboer = 0;
-//[letter count, combo reward x score]
-letter_combo[0, 0] = 0;
-letter_combo[0, 1] = 1.0;
-
-letter_combo[1, 0] = 25;
-letter_combo[1, 1] = 1.5;
-
-letter_combo[2, 0] = 35;
-letter_combo[2, 1] = 1.8;
-
-letter_combo[3, 0] = 45;
-letter_combo[3, 1] = 2;
+letter_limits[2,2] = 6;
+letter_limits[2,3] = 1;
+letter_limits[2,4] = 2;
 
 //Difficulties
 current_difficulty_gibbrsh = 0; //increasing difficulty level
@@ -240,6 +231,8 @@ time = 0;
 best_score = 0;
 //Color
 color = c_white;
+//Check if you're still typing
+pressed = 0;
 
 
 //Misc vars
@@ -256,22 +249,18 @@ letter_count_correct = 0; //letter count
 best_letter_count = 0; //best letter count
 //Combos
 comboer = 0;
-//[letter count, combo reward x score x actual level]
-letter_combo[0, 0] = 0;
+//[letter count required to proceed to next level, combo reward multiplied by score x actual level]
+letter_combo[0, 0] = 25;
 letter_combo[0, 1] = 1.0;
-letter_combo[0, 2] = 0;
 
-letter_combo[1, 0] = 10;
+letter_combo[1, 0] = 50;
 letter_combo[1, 1] = 1.5;
-letter_combo[1, 2] = 1;
 
-letter_combo[2, 0] = 20;
+letter_combo[2, 0] = 75;
 letter_combo[2, 1] = 1.8;
-letter_combo[2, 2] = 2;
 
-letter_combo[3, 0] = 30;
+letter_combo[3, 0] = 100;
 letter_combo[3, 1] = 2;
-letter_combo[3, 2] = 3;
 
 //Colors
 color_combo = 0;
@@ -325,128 +314,159 @@ final_words = 0;
 text_colors[0] = make_color_rgb(255,193,6); // Orange
 text_colors[1] = make_color_rgb(6,68,255); //blue
 
+
 //Dark Bg
 bg_colors[0, 0] = make_color_rgb(8,48,69);
 bg_colors[0, 1] = c_white;
 bg_colors[0, 2] = text_colors[0];
+bg_colors[0, 3] = c_black; //outline
 
 bg_colors[1, 0] = c_black;
 bg_colors[1, 1] = c_white;
 bg_colors[1, 2] = text_colors[0];
+bg_colors[1, 3] = c_black; //outline
 
 bg_colors[2, 0] = make_color_rgb(16,120,149);
 bg_colors[2, 1] = c_white;
 bg_colors[2, 2] = text_colors[0];
+bg_colors[2, 3] = c_black; //outline
 
 bg_colors[3, 0] = make_color_rgb(16, 55, 106);
 bg_colors[3, 1] = c_white;
 bg_colors[3, 2] = text_colors[0];
+bg_colors[3, 3] = c_black; //outline
 
 bg_colors[4, 0] = make_color_rgb(65, 37, 106);
 bg_colors[4, 1] = c_white;
 bg_colors[4, 2] = text_colors[0];
+bg_colors[4, 3] = c_black; //outline
 
 bg_colors[5, 0] = make_color_rgb(65, 37, 67);
 bg_colors[5, 1] = c_white;
 bg_colors[5, 2] = text_colors[0];
+bg_colors[5, 3] = c_black; //outline
 
 bg_colors[6, 0] = make_color_rgb(65, 64, 67);
 bg_colors[6, 1] = c_white;
 bg_colors[6, 2] = text_colors[0];
+bg_colors[6, 3] = c_black; //outline
 
 bg_colors[7, 0] = make_color_rgb(15, 64, 67);
 bg_colors[7, 1] = c_white;
 bg_colors[7, 2] = text_colors[0];
+bg_colors[7, 3] = c_black; //outline
 
 bg_colors[8, 0] = make_color_rgb(82, 38, 91);
 bg_colors[8, 1] = c_white;
 bg_colors[8, 2] = text_colors[0];
+bg_colors[8, 3] = c_black; //outline
 
 bg_colors[9, 0] = make_color_rgb(68, 5, 7);
 bg_colors[9, 1] = c_white;
 bg_colors[9, 2] = text_colors[0];
+bg_colors[9, 3] = c_black; //outline
 
 bg_colors[10, 0] = make_color_rgb(72, 84, 13);
 bg_colors[10, 1] = c_white;
 bg_colors[10, 2] = text_colors[0];
+bg_colors[10, 3] = c_black; //outline
 
 bg_colors[11, 0] = make_color_rgb(0, 77, 59);
 bg_colors[11, 1] = c_white;
 bg_colors[11, 2] = text_colors[0];
+bg_colors[11, 3] = c_black; //outline
 
 bg_colors[12, 0] = make_color_rgb(136, 36, 59);
 bg_colors[12, 1] = c_white;
 bg_colors[12, 2] = text_colors[0];
+bg_colors[12, 3] = c_black; //outline
 
 bg_colors[13, 0] = make_color_rgb(28, 109, 103);
 bg_colors[13, 1] = c_white;
 bg_colors[13, 2] = text_colors[0];
+bg_colors[13, 3] = c_black; //outline
 
 bg_colors[14, 0] = make_color_rgb(67, 115, 127);
 bg_colors[14, 1] = c_white;
 bg_colors[14, 2] = text_colors[0];
+bg_colors[14, 3] = c_black; //outline
 
 
 //Light bg
 bg_colors[15, 0] = make_color_rgb(241,243,244);
 bg_colors[15, 1] = c_black;
 bg_colors[15, 2] = text_colors[1];
+bg_colors[15, 3] = c_white; //outline
 
 bg_colors[16, 0] = make_color_rgb(181,197,136);
 bg_colors[16, 1] = c_black;
 bg_colors[16, 2] = text_colors[1];
+bg_colors[16, 3] = c_white; //outline
 
 bg_colors[17, 0] = make_color_rgb(229,222,214);
 bg_colors[17, 1] = c_black;
 bg_colors[17, 2] = text_colors[1];
+bg_colors[17, 3] = c_white; //outline
 
 bg_colors[18, 0] = make_color_rgb(185, 142, 229);
 bg_colors[18, 1] = c_black;
 bg_colors[18, 2] = text_colors[1];
+bg_colors[18, 3] = c_white; //outline
 
 bg_colors[19, 0] = make_color_rgb(206, 214, 229);
 bg_colors[19, 1] = c_black;
 bg_colors[19, 2] = text_colors[1];
+bg_colors[19, 3] = c_white; //outline
 
 bg_colors[20, 0] = make_color_rgb(206, 214, 164);
 bg_colors[20, 1] = c_black;
 bg_colors[20, 2] = text_colors[1];
+bg_colors[20, 3] = c_white; //outline
 
 bg_colors[21, 0] = make_color_rgb(236, 166, 164);
 bg_colors[21, 1] = c_black;
 bg_colors[21, 2] = text_colors[1];
+bg_colors[21, 3] = c_white; //outline
 
 bg_colors[22, 0] = make_color_rgb(253, 246, 24);
 bg_colors[22, 1] = c_black;
 bg_colors[22, 2] = text_colors[1];
+bg_colors[22, 3] = c_white; //outline
 
 bg_colors[23, 0] = make_color_rgb(178, 181, 201);
 bg_colors[23, 1] = c_black;
 bg_colors[23, 2] = text_colors[1];
+bg_colors[23, 3] = c_white; //outline
 
 bg_colors[24, 0] = make_color_rgb(230, 245, 236);
 bg_colors[24, 1] = c_black;
 bg_colors[24, 2] = text_colors[1];
+bg_colors[24, 3] = c_white; //outline
 
 bg_colors[25, 0] = make_color_rgb(191, 186, 236);
 bg_colors[25, 1] = c_black;
 bg_colors[25, 2] = text_colors[1];
+bg_colors[25, 3] = c_white; //outline
 
 bg_colors[26, 0] = make_color_rgb(241, 186, 236);
 bg_colors[26, 1] = c_black;
 bg_colors[26, 2] = text_colors[1];
+bg_colors[26, 3] = c_white; //outline
 
 bg_colors[27, 0] = make_color_rgb(240, 166, 163);
 bg_colors[27, 1] = c_black;
 bg_colors[27, 2] = text_colors[1];
+bg_colors[27, 3] = c_white; //outline
 
 bg_colors[28, 0] = make_color_rgb(183, 254, 253);
 bg_colors[28, 1] = c_black;
 bg_colors[28, 2] = text_colors[1];
+bg_colors[28, 3] = c_white; //outline
 
 bg_colors[29, 0] = make_color_rgb(242, 172, 127);
 bg_colors[29, 1] = c_black;
 bg_colors[29, 2] = text_colors[1];
+bg_colors[29, 3] = c_white; //outline
 
 
 
@@ -463,6 +483,30 @@ bg_colors[29, 2] = text_colors[1];
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///misc
+music_playing = 1;
+se_playing = 1;
+amb_playing = 1;
 </string>
           </argument>
         </arguments>
@@ -511,6 +555,71 @@ state_update();
             <kind>1</kind>
             <string>///State Execute
 state_execute();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="113">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (se_playing)
+{
+audio_group_set_gain(soundeffects, 0, 0);
+se_playing = 0;
+}
+else
+{
+audio_group_set_gain(soundeffects, 1, 0);
+se_playing = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="112">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (music_playing)
+{
+audio_group_set_gain(music, 0, 0);
+music_playing = 0;
+}
+else
+{
+audio_group_set_gain(music, 1, 0);
+music_playing = 1;
+}
+
 </string>
           </argument>
         </arguments>

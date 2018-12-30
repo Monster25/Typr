@@ -16,7 +16,14 @@
       <sound>sound\snd_correct_02</sound>
       <sound>sound\snd_correct_01</sound>
       <sound>sound\snd_correct_03</sound>
+      <sound>sound\snd_correct_04</sound>
+      <sound>sound\snd_correct_05</sound>
+      <sound>sound\snd_correct_06</sound>
+      <sound>sound\snd_correct_07</sound>
+      <sound>sound\snd_correct_08</sound>
       <sound>sound\snd_incorrect_01</sound>
+      <sound>sound\bg_01</sound>
+      <sound>sound\bg_02</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -51,12 +58,14 @@
       <script>scripts\scr_resolution.gml</script>
       <script>scripts\scr_fade_outin.gml</script>
       <script>scripts\scr_random_bg_color.gml</script>
+      <script>scripts\scr_draw_text_outline.gml</script>
     </scripts>
     <scripts name="Mechanics">
       <script>scripts\scr_generate_word.gml</script>
       <script>scripts\scr_next_word.gml</script>
       <script>scripts\scr_split_paragraph.gml</script>
       <script>scripts\scr_generate_paragraph.gml</script>
+      <script>scripts\scr_generate_gibbrsh_paragraph.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

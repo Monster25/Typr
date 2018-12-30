@@ -148,16 +148,16 @@ if (instance_exists(obj_game_control))
 draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,2]);
 draw_set_font(fnt_text_bold);
 logo = "Typr.";
-draw_text(global.displayWidth/2,0+string_height("Typr.")/3,"Typr.");
+scr_draw_text_outline(global.displayWidth/2,0+string_height("Typr.")/3,obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Typr.");
 //draw_text(global.displayWidth/2,0,"Typr");
 //Menu choices
 draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 draw_set_font(fnt_menu);
 
-draw_text(global.displayWidth/2,global.displayHeight/2.3,"Classic");
-draw_text(global.displayWidth/2,global.displayHeight/2.3+string_height("Classic")*1.6,"Gibbrsh");
-draw_text(global.displayWidth/2,global.displayHeight/2.3+string_height("Classic")*3.2,"Quit");
-draw_text(global.displayWidth/2+string_width(menu[mpos])/2+10,global.displayHeight/2.3+string_height("Classic")*1.6*mpos-5,blinker);
+scr_draw_text_outline(global.displayWidth/2,global.displayHeight/2.3,obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Classic");
+scr_draw_text_outline(global.displayWidth/2,global.displayHeight/2.3+string_height("Classic")*1.6,obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Gibbrsh");
+scr_draw_text_outline(global.displayWidth/2,global.displayHeight/2.3+string_height("Classic")*3.2,obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Quit");
+scr_draw_text_outline(global.displayWidth/2+string_width(menu[mpos])/2+10,global.displayHeight/2.3+string_height("Classic")*1.6*mpos-5,obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),blinker);
 
 </string>
           </argument>

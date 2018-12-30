@@ -40,6 +40,8 @@ draw_text(200,400,"Curent difficulty classic: "+string(obj_game_control.difficul
 draw_text(200,500,"Time: "+string(obj_game_control.time));
 */
 draw_text(200,1000,"Color id: "+string(obj_game_control.color_combo));
+//draw_text(200, 500, obj_game_control.comboer);
+//draw_text(200, 520, obj_game_control.letter_count_correct);
 </string>
           </argument>
         </arguments>
