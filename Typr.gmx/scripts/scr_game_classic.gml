@@ -6,6 +6,7 @@ if (state_new)
     scr_reset_input(player_input);
     display_word = "";
     time = 0;
+    obj_gui.pg = 0;
     real_time = 0;
     best_score = 0;
     best_letter_count = 0;
@@ -29,6 +30,7 @@ if (state_new)
     current_word = 0;
     //generate paragraph
     current_paragraph = scr_generate_paragraph(difficulty_changer_classic);
+    
     //Split paragraph into an array of words
     words = scr_split_paragraph(current_paragraph);
     //Display initial word;
@@ -131,12 +133,14 @@ comboer++;
 //Correct word
 if (player_input == display_word)
 {
+//Floating animation
+//scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,40,time_gain_classic*string_length(words[current_word]),0);
+scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,80,letter_score_classic*string_length(words[current_word])*letter_combo[comboer,1],0);
 //Sound effect
-
 if (current_word != array_length_1d(words)-1)
 {
 var sound = audio_play_sound(obj_sound.correct_word,1,0);
-audio_sound_pitch(sound,1+((current_word)/45));
+audio_sound_pitch(sound,1+((current_word)/50));
 }
 //Add word count
 word_count++;
@@ -144,9 +148,9 @@ word_count++;
 scr_reset_input(player_input);
 
 //Add score
-best_score+=time*letter_combo[comboer,1];
+best_score+=letter_score_classic*string_length(words[current_word])*letter_combo[comboer,1];
 //add gain to current time
-time += time_gain_classic*(string_length(display_word)-1);
+//time += time_gain_classic*(string_length(display_word)-1);
 //Reset misc vars
 i = -1;
 //Go to next word aslong as there is enough paragraph left

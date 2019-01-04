@@ -25,13 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
-draw_text(global.displayWidth/2,global.displayHeight/2,"You ran out of time! Here are your stats:")
-draw_text(global.displayWidth/2,global.displayHeight/2+50,"Total Words Typed: "+string(obj_game_control.final_words));
-draw_text(global.displayWidth/2,global.displayHeight/2+100,"Longest Correct Letter Combo: "+string(obj_game_control.final_combo));
-draw_text(global.displayWidth/2,global.displayHeight/2+150,"Final Score: "+string(floor(obj_game_control.final_score)));
-draw_text(global.displayWidth/2,global.displayHeight/2+200,"Average WPM: "+string(round(obj_game_control.final_words/(obj_game_control.real_time/60))));
-draw_text(global.displayWidth/2,global.displayHeight/2+250,"Total Time Elapsed: "+string(obj_game_control.real_time));
+            <string>draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+//draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
+scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,1],"You ran out of time! Here are your stats:#Total Words Typed - "+string(obj_game_control.final_words)+"
+Longest Correct Letter Combo - "+string(obj_game_control.final_combo)+"
+Average WPM - "+string(round(obj_game_control.final_words/((obj_game_control.real_time/60))))+"
+Total Time Elapsed - "+string(round(obj_game_control.real_time))+" seconds"+"
+Final Score - "+string(obj_game_control.final_score))
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2+50),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,1],"Total Words Typed: "+string(obj_game_control.final_words));
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2+100),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,1],"Longest Correct Letter Combo: "+string(obj_game_control.final_combo));
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2+150),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,1],"Final Score: "+string(floor(obj_game_control.final_score)));
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2+200),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,1],"Average WPM: "+string(round(obj_game_control.final_words/(obj_game_control.real_time/60))));
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2+250),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,1],"Total Time Elapsed: "+string(obj_game_control.real_time));
 </string>
           </argument>
         </arguments>

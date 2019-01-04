@@ -34,7 +34,7 @@ incorrect_word = snd_incorrect_01;
 music_01 = bg_02;
 
 //Control sound
-audio_group_set_gain(soundeffects,0.5,0);
+//audio_group_set_gain(soundeffects,0.5,0);
 </string>
           </argument>
         </arguments>

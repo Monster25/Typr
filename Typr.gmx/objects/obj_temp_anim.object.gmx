@@ -25,19 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Properties
-menu[0] = "Classic";
-menu[1] = "Gibbrsh";
-menu[2] = "Quit";
-space = 80;
-mpos = 0;
-logo = "";
-pushed = 0;
-
-alarm[0] = 0.53*room_speed;
-blinker = "|";
-
-
+            <string>pos_x = x;
+pos_y = y;
+color = 0;
+message = "";
+timer = 0;
+dir = 0;
+image_x = 1.4;
+image_y = 1.4;
 
 </string>
           </argument>
@@ -61,11 +56,7 @@ blinker = "|";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (blinker == "|")
-blinker = "";
-else if (blinker == "")
-blinker = "|";
-alarm[0] = 0.53*room_speed;
+            <string>instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -88,34 +79,23 @@ alarm[0] = 0.53*room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Functionality
-var move = 0;
-move -= max(keyboard_check_pressed(vk_up),0);
-move += max(keyboard_check_pressed(vk_down),0);
-
-if (move != 0)
+            <string>//Move anim
+switch (dir)
 {
-    blinker = "|";
-    alarm[0] = 0.53*room_speed;
-    //Play sound
-    audio_play_sound(obj_sound.menu_move,1,0);
-    mpos += move;
-    
-    if (mpos &lt; 0)
-    mpos = array_length_1d(menu) - 1;
-    if (mpos &gt; array_length_1d(menu) - 1)
-    mpos = 0;
+case 0:
+if (y&gt;pos_y-distance)
+y--
+break;
+case 1:
+if (y&lt;pos_y+distance)
+y++
+break;
 }
 
-var push;
-push = max(keyboard_check_released(vk_enter),0)
-if (push == 1 &amp;&amp; pushed == 0)
-{
-pushed = 1;
-//Play sound
-audio_play_sound(obj_sound.menu_push,1,0);
-scr_menu();
-}
+if (image_alpha &lt;= 0)
+instance_destroy();
+//always set color to  the current one
+color = obj_game_control.bg_colors[obj_game_control.color_combo,1];
 </string>
           </argument>
         </arguments>
@@ -138,27 +118,15 @@ scr_menu();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw menu 
-draw_set_font(fnt_menu)
-draw_set_halign(fa_center)
-draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
-//draw_set_valign(fa_middle);
-//Title
-if (instance_exists(obj_game_control))
-draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,2]);
-draw_set_font(fnt_text_bold);
-logo = "Typr.";
-draw_set_valign(fa_top)
-scr_draw_text_outline(round(global.displayWidth/2),round(0+string_height("Typr.")/3),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Typr.");
-//draw_text(global.displayWidth/2,0,"Typr");
-//Menu choices
-draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
-draw_set_font(fnt_menu);
-
-scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Classic");
-scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3+string_height("Classic")*1.6),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Gibbrsh");
-scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3+string_height("Classic")*3.2),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Quit");
-scr_draw_text_outline(round(global.displayWidth/2+string_width(menu[mpos])/2+10),round(global.displayHeight/2.3+string_height("Classic")*1.6*mpos-5),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),blinker);
+            <string>draw_set_color(color);
+draw_set_font(font);
+draw_text_transformed_colour(x,y,message,image_x,image_y,0,color,color,color,color,image_alpha);
+if (image_x &gt; 1 &amp;&amp; image_y &gt; 1)
+{
+image_x-=0.02;
+image_y-=0.02;
+}
+image_alpha-=0.02
 
 </string>
           </argument>

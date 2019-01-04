@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -32,6 +32,9 @@ checker = 0;
 //Proper paragraph display
 distance = 0;
 relative_distance[0] = 0;
+
+//misc
+pg = 0;
 </string>
           </argument>
         </arguments>
@@ -121,16 +124,25 @@ draw_set_halign(fa_center);
 //Combo bar
 var pc;
 pc = obj_game_control.comboer/(array_height_2d(obj_game_control.letter_combo)-1)*100;
-draw_healthbar(global.displayWidth/2-100,global.displayHeight/2-global.displayHeight/5,global.displayWidth/2+100,global.displayHeight/2-global.displayHeight/5+8,pc,obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,2],obj_game_control.bg_colors[obj_game_control.color_combo,2],0,1,1);
+if (pg&lt;pc)
+pg+=2;
+if (pg&gt;pc &amp;&amp; pg &gt;= 0)
+pg-=2
+
+draw_healthbar(round(global.displayWidth/2-100),round(global.displayHeight/2-global.displayHeight/5),round(global.displayWidth/2+100),round(global.displayHeight/2-global.displayHeight/5+22),pg,obj_game_control.bg_colors[obj_game_control.color_combo,1],obj_game_control.bg_colors[obj_game_control.color_combo,2],obj_game_control.bg_colors[obj_game_control.color_combo,2],0,1,1);
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight.2-global.displayHeight/5),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.letter_combo[obj_game_control.comboer,2])
+draw_set_font(fnt_text_italic_small);
+scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/5), obj_game_control.bg_colors[obj_game_control.color_combo,1], obj_game_control.bg_colors[obj_game_control.color_combo,3],"x"+string(obj_game_control.letter_combo[obj_game_control.comboer,1])) ;
 //Score and time
-scr_draw_text_outline(global.displayWidth/2,global.displayHeight/2-global.displayHeight/3, obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,1], "Score: "+string(floor(obj_game_control.best_score))+"     Time: "+string(obj_game_control.time));
+draw_set_font(fnt_text);
+scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/2.5), obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,1], "Score: "+string(obj_game_control.best_score)+"     Time: "+string(round(obj_game_control.time)));
 
 //draw_text(global.displayWidth/2-string_width("Time: ")/2,global.displayHeight/2-200, "Time: "+string(obj_game_control.time));
 
 
 
 //Display sentence with words
-
+draw_set_font(fnt_text);
 //if (obj_game_control.state_name == "classic")
 //{
 for (var i = 0;i&lt;array_length_1d(obj_game_control.words);i++)
@@ -162,12 +174,20 @@ distance += string_width(obj_game_control.words[i]);
 }
 distance = 0;
 //}
+//Author
+if (obj_game_control.paragraph_pool!=0 &amp;&amp; obj_game_control.state_name == "classic")
+{
+draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
+draw_set_font(fnt_text_italic);
+draw_text(round(global.displayWidth/2 + string_width(obj_game_control.current_paragraph)/4),round(global.displayHeight/2+string_height(obj_game_control.current_paragraph)*1.8), string(obj_game_control.paragraph_pool[obj_game_control.paragraph_index,1]))
 
+}
 //else
 //draw_text(global.displayWidth/2, global.displayHeight/2, obj_game_control.display_word);
 
 ///draw color for checking word
 draw_set_halign(fa_left);
+draw_set_font(fnt_text);
 draw_set_circle_precision(4);
 //if (obj_game_control.state_name == "classic")
 //{
@@ -183,7 +203,7 @@ draw_circle_color(global.displayWidth/2-string_width(obj_game_control.current_pa
 draw_set_halign(fa_center);
 draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 //scr_draw_text_outline(global.displayWidth/2, global.displayHeight/2+200, obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,1], obj_game_control.player_input+blinker);
-draw_text(global.displayWidth/2, global.displayHeight/2+200, obj_game_control.player_input+blinker);
+draw_text(round(global.displayWidth/2), round(global.displayHeight/2+200), obj_game_control.player_input+blinker);
 //var display = string_insert(blinker,obj_game_control.player_input,string_char_at(obj_game_control.player_input,string_length(obj_game_control.player_input)));
 //draw_text(global.displayWidth/2+string_width(obj_game_control.player_input), global.displayHeight/2+200,blinker);
 //draw_text(global.displayWidth/2, global.displayHeight/2+200, display);

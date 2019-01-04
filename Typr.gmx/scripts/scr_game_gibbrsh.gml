@@ -4,6 +4,7 @@ if (state_new)
     //Reset vars
     scr_reset_input(player_input);
     display_word = "";
+    obj_gui.pg = 0;
     time = 0;
     real_time = 0;
     best_score = 0;
@@ -128,12 +129,15 @@ comboer++;
 //Correct word
 if (player_input == display_word)
 {
+//Floating animation
+//scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,40,time_gain_gibbrsh*string_length(words[current_word]),0);
+scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,80,letter_score_gibbrsh*string_length(words[current_word])*letter_combo[comboer,1],0);
 //Sound effect
 //audio_play_sound(obj_sound.correct_paragraph,1,0);
 if (current_word != array_length_1d(words)-1)
 {
 var sound = audio_play_sound(obj_sound.correct_word,1,0);
-audio_sound_pitch(sound,1+((current_word)/45));
+audio_sound_pitch(sound,1+((current_word)/50));
 }
 
 //Add word count
@@ -141,9 +145,9 @@ word_count++;
 //Reset input and true input
 scr_reset_input(player_input);
 //Add score + combo modifier
-best_score+=time*letter_combo[comboer,1];
+best_score+=letter_score_gibbrsh*string_length(words[current_word])*letter_combo[comboer,1];
 //add gain to current time
-time += time_gain_gibbrsh*(string_length(display_word)-1);
+//time += time_gain_gibbrsh*(string_length(display_word)-1);
 //Reset misc vars
 i = -1;
 //Gen

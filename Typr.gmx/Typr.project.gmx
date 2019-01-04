@@ -66,11 +66,13 @@
       <script>scripts\scr_split_paragraph.gml</script>
       <script>scripts\scr_generate_paragraph.gml</script>
       <script>scripts\scr_generate_gibbrsh_paragraph.gml</script>
+      <script>scripts\scr_float_text.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_text</font>
     <font>fonts\fnt_text_italic</font>
+    <font>fonts\fnt_text_italic_small</font>
     <font>fonts\fnt_menu</font>
     <font>fonts\fnt_menu_big</font>
     <font>fonts\fnt_text_bold</font>
@@ -85,6 +87,7 @@
     <objects name="Gui">
       <object>objects\obj_gui</object>
       <object>objects\obj_scoreboard</object>
+      <object>objects\obj_temp_anim</object>
     </objects>
     <objects name="Menu">
       <object>objects\obj_menu</object>
