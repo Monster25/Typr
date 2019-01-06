@@ -213,6 +213,36 @@ academic[18, 1] = "Electrical Conduction";
 academic[19, 0] = "Knives such as the seax and other blades of similar length, between 1 and 2 feet, are sometimes construed as swords.";
 academic[19, 1] = "Classification of Swords";
 
+academic[20, 0] = "The softness of copper partly explains its high electrical conductivity and high thermal conductivity.";
+academic[20, 1] = "Copper (element)";
+
+academic[21, 0] = "There are ongoing investigations assessing the past habitability potential of Mars, as well as the possibility of extant life.";
+academic[21, 1] = "Mars (planet)";
+
+academic[22, 0] = "Trees play a significant role in reducing erosion and moderating the climate.";
+academic[22, 1] = "Trees";
+
+academic[23, 0] = "An alternative name for England is Albion. The name Albion originally referred to the entire island of Great Britain.";
+academic[23, 1] = "Etymology of England";
+
+academic[24, 0] = "The oldest proto-human bones discovered in England date from 500,000 years ago.";
+academic[24, 1] = "England";
+
+academic[25, 0] = "There is enough DNA in the average person's body to stretch from the sun to Pluto and back, 17 times";
+academic[25, 1] = "Scientific Facts #1";
+
+academic[26, 0] = "The average human body carries ten times more bacterial cells than human cells";
+academic[26, 1] = "Scientific Facts #2";
+
+academic[27, 0] = "At over 2000 kilometers long, The Great Barrier Reef is the largest living structure on Earth";
+academic[27, 1] = "Scientific Facts #3";
+
+academic[28, 0] = "In an entire lifetime, the average person walks the equivalent of five times around the world";
+academic[28, 1] = "Scientific Facts #4";
+
+academic[29, 0] = "An individual blood cell takes about 60 seconds to make a complete circuit of the body.";
+academic[29, 1] = "Scientific Facts #5";
+
 //Qutoes (From movies and stuff)
 quotes[0, 0] = "The die has been cast.";
 quotes[0, 1] = "Gaius Julius Caesar";
@@ -250,10 +280,10 @@ quotes[10, 1] = "Dr. Suess";
 quotes[11, 0] = "Get busy living or get busy dying.";
 quotes[11, 1] = "Stephen King";
 
-quotes[12, 0] = "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do..";
+quotes[12, 0] = "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do..";
 quotes[12, 1] = "Mark Twain";
 
-quotes[13, 0] = "Great minds discuss ideas; average minds discuss events, small minds discuss people.";
+quotes[13, 0] = "Great minds discuss ideas, average minds discuss events, small minds discuss people.";
 quotes[13, 1] = "Eleanor Roosevelt";
 
 quotes[14, 0] = "Those who dare to fail miserably can achieve greatly.";
@@ -273,6 +303,36 @@ quotes[18, 1] = "J. K. Rowling";
 
 quotes[19, 0] = "Only put off until tomorrow what you are willing to die having left undone.";
 quotes[19, 1] = "Pablo Picasso";
+
+quotes[20, 0] = "Life is not a problem to be solved, but a reality to be experienced.";
+quotes[20, 1] = "Soren Kierkegaard";
+
+quotes[21, 0] = "Appear weak when you are strong, and strong when you are weak.";
+quotes[21, 1] = "Sun Tzu, The Art of War";
+
+quotes[22, 0] = "The supreme art of war is to subdue the enemy without fighting.";
+quotes[22, 1] = "Sun Tzu, The Art of War";
+
+quotes[23, 0] = "In the midst of chaos, there is also opportunity.";
+quotes[23, 1] = "Sun Tzu, The Art of War";
+
+quotes[24, 0] = "Who wishes to fight must first count the cost.";
+quotes[24, 1] = "Sun Tzu, The Art of War";
+
+quotes[25, 0] = "The only true wisdom is in knowing you know nothing.";
+quotes[25, 1] = "Socrates";
+
+quotes[26, 0] = "Quality is not an act, it is a habit.";
+quotes[26, 1] = "Aristotle";
+
+quotes[27, 0] = "The power of imagination makes us infinite.";
+quotes[27, 1] = "John Muir";
+
+quotes[28, 0] = "Originality is nothing but judicious imitation.";
+quotes[28, 1] = "Voltaire";
+
+quotes[29, 0] = "Life is made of ever so many partings welded together.";
+quotes[29, 1] = "Charles Dickens";
 
 //Artistic (Music)
 artistic[0, 0] = "Why does the sun go on shining?";
@@ -334,6 +394,37 @@ artistic[18, 1] = "Imagine Dragons - Natural";
 
 artistic[19, 0] = "Yeah runnin' down a dream. That never would come to me.";
 artistic[19, 1] = "Tom Petty - Runnin' Down A Dream";
+
+artistic[20, 0] = "I got the eye of the tiger, a fighter. Dancing through the fire.";
+artistic[20, 1] = "Katy Perry - Roar";
+
+artistic[21, 0] = "I wish I knew then, what I know now.";
+artistic[21, 1] = "Katy Perry - Wide Awake";
+
+artistic[22, 0] = "Talkin' in my sleep at night, makin' myself crazy.";
+artistic[22, 1] = "Dua Lipa - New Rules";
+
+artistic[23, 0] = "These friends keep talkin' way too much.";
+artistic[23, 1] = "Ariana Grande - Side to Side";
+
+artistic[24, 0] = "Coming in out of the rain to hear the Jazz go down.";
+artistic[24, 1] = "Dire Straits - Sultans of Swing";
+
+artistic[25, 0] = "I get out the work and let the jay snap the scale.";
+artistic[25, 1] = "Young Thug - Old English";
+
+artistic[26, 0] = "Love in a thousand different flavors. I wish that I could taste them all tonight.";
+artistic[26, 1] = "Jason Derulo - Swalla";
+
+artistic[27, 0] = "I was told when I get older all my fears would shrink.";
+artistic[27, 1] = "Twenty One Pilots - Stressed Out";
+
+artistic[28, 0] = "When I leave don't save my seat, I'll be back when it's all complete.";
+artistic[28, 1] = "Twenty One Pilots - Chlorine";
+
+artistic[29, 0] = "All my enemies who wouldn't wish who I was. But it's fun to fantasize.";
+artistic[29, 1] = "Twenty One Pilots - Ride";
+
 
 
 </string>
