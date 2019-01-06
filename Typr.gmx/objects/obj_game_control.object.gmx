@@ -163,7 +163,7 @@ academic[2, 0] = "Mercury is a heavy, silvery-white liquid metal. Compared to ot
 academic[2, 1] = "Mercury (element)";
 
 academic[3, 0] = "In 85 BC, Caesar's father died suddenly, so Caesar was the head of the family at 16.";
-academic[3, 1] = "Gaius Julius Caesar (Roman General)";
+academic[3, 1] = "Gaius Julius Caesar";
 
 academic[4, 0] = "The Benedictines are a Catholic religious order of enclosed monks and nuns that follow the Rule of Saint Benedict.";
 academic[4, 1] = "The Benedictines";
@@ -171,36 +171,66 @@ academic[4, 1] = "The Benedictines";
 academic[5, 0] = "Clarke's father, Daniel Clarke, was a Scottish weaver who came to America for the American Revolution.";
 academic[5, 1] = "Lewis Clarke";
 
-academic[6, 0] = "The Dacia of King Burebista, stretched from the Black Sea to the source of the river Tisa and from the Balkan Mountains to Bohemia.";
+academic[6, 0] = "The Dacia of King Burebista, stretched from the Black Sea to the river Tisa and from the Balkan Mountains to Bohemia.";
 academic[6, 1] = "The Geography of Dacia";
 
 academic[7, 0] = "Globally, the Revolution accelerated the rise of republics and democracies.";
 academic[7, 1] = "The French Revolution";
 
-academic[8, 0] = "King Harold accepted a truce with the surviving Norwegians, including Harald's son Olaf and Paul Thorfinnsson, Earl of Orkney.";
-academic[8, 1] = "The Battle of Stamford Bridge (1066) - The Aftermath";
+academic[8, 0] = "King Harold accepted a truce with the surviving Norwegians, including Harald's son Olaf and Paul Thorfinnsson.";
+academic[8, 1] = "The Battle of Stamford Bridge (1066)";
 
 academic[9, 0] = "After the mid-September Polish defeat in the Battle of the Bzura, the Germans gained an undisputed advantage.";
 academic[9, 1] = "The Invasion of Poland (1939)";
 
+academic[10, 0] = "In 1904, Usubov participated in the Russo-Japanese War in the rank of Stabskapitan.";
+academic[10, 1] = "Ibrahim bey Usubov";
+
+academic[11, 0] = "The decoration is worn around the neck on its accompanying narrow blue and white ribbon.";
+academic[11, 1] = "Cross of Honour of the German Mother (1939 - 1945)";
+
+academic[12, 0] = "The Knights wore white surcoats with a black cross. A cross patern was sometimes used as their coat of arms.";
+academic[12, 1] = "The Teutonic Order";
+
+academic[13, 0] = "The city's location made it master of the Mediterranean's maritime trade.";
+academic[13, 1] = "Carthage";
+
+academic[14, 0] = "The insignia of the kings of Rome were twelve lictors wielding the fasces (bundles) bearing axes.";
+academic[14, 1] = "The Roman Kingdom";
+
+academic[15, 0] = "The earliest undisputed direct examples of a Celtic language are the Lepontic inscriptions beginning in the 6th century BC.";
+academic[15, 1] = "The Celts";
+
+academic[16, 0] = "Animals shown are often representations of the gods, another continuing feature of Mesopotamian art.";
+academic[16, 1] = "The Art of Ancient Mesopotamia";
+
+academic[17, 0] = "Written sources evidence that the relationship between Stephen and Vlad Dracula became tense in early 1462.";
+academic[17, 1] = "Stephen the Great of Moldavia";
+
+academic[18, 0] = "Metals are good conductors because they have unfilled space in the valence energy band.";
+academic[18, 1] = "Electrical Conduction";
+
+academic[19, 0] = "Knives such as the seax and other blades of similar length, between 1 and 2 feet, are sometimes construed as swords.";
+academic[19, 1] = "Classification of Swords";
+
 //Qutoes (From movies and stuff)
 quotes[0, 0] = "The die has been cast.";
-quotes[0, 1] = "Gaius Julius Caesar (Roman General)";
+quotes[0, 1] = "Gaius Julius Caesar";
 
 quotes[1, 0] = "I came, I saw, I conquered.";
-quotes[1, 1] = "Gaius Julius Caesar (Roman General)";
+quotes[1, 1] = "Gaius Julius Caesar";
 
 quotes[2, 0] = "An adversary is more hurt by desertion than by slaughter.";
-quotes[2, 1] = "Vegetius (Roman Writer)";
+quotes[2, 1] = "Vegetius";
 
 quotes[3, 0] = "Conquered, we conquer.";
-quotes[3, 1] = "Plautus (Roman Playwright)";
+quotes[3, 1] = "Plautus";
 
 quotes[4, 0] = "Woe to the vanquished.";
 quotes[4, 1] = "Brennus, Chieftan of the Senones";
 
 quotes[5, 0] = "Conquered Greece took captive her savage conqueror.";
-quotes[5, 1] = "Horace (Roman Poet)";
+quotes[5, 1] = "Horace";
 
 quotes[6, 0] = "Stay a while, and listen!";
 quotes[6, 1] = "Deckard Cain - Diablo";
@@ -212,7 +242,37 @@ quotes[8, 0] = "I'll hunt you to the ends of the earth if I have to! Do you hear
 quotes[8, 1] = "Arthas - Warcraft";
 
 quotes[9, 0] = "In adversity, remember to keep an even mind.";
-quotes[9, 1] = "Horace (Roman Poet)";
+quotes[9, 1] = "Horace";
+
+quotes[10, 0] = "You know you're in love when you can't fall asleep because reality is finally better than your dreams.";
+quotes[10, 1] = "Dr. Suess";
+
+quotes[11, 0] = "Get busy living or get busy dying.";
+quotes[11, 1] = "Stephen King";
+
+quotes[12, 0] = "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do..";
+quotes[12, 1] = "Mark Twain";
+
+quotes[13, 0] = "Great minds discuss ideas; average minds discuss events, small minds discuss people.";
+quotes[13, 1] = "Eleanor Roosevelt";
+
+quotes[14, 0] = "Those who dare to fail miserably can achieve greatly.";
+quotes[14, 1] = "John F. Kennedy";
+
+quotes[15, 0] = "It is hard to fail, but it is worse never to have tried to succeed.";
+quotes[15, 1] = "Theodore Roosevelt";
+
+quotes[16, 0] = "Let us always meet each other with smile, for the smile is the beginning of love.";
+quotes[16, 1] = "Mother Theresa";
+
+quotes[17, 0] = "Love is a serious mental disease.";
+quotes[17, 1] = "Plato";
+
+quotes[18, 0] = "It is our choices, that show what we truly are, far more than our abilities.";
+quotes[18, 1] = "J. K. Rowling";
+
+quotes[19, 0] = "Only put off until tomorrow what you are willing to die having left undone.";
+quotes[19, 1] = "Pablo Picasso";
 
 //Artistic (Music)
 artistic[0, 0] = "Why does the sun go on shining?";
@@ -244,6 +304,36 @@ artistic[8, 1] = "Tash Sultana - Jungle";
 
 artistic[9, 0] = "It's summer time and I hang on the vine. They're gonna make me into sweet red wine.";
 artistic[9, 1] = "Marina and The Diamonds - Froot";
+
+artistic[10, 0] = "I with my two fists of iron but I'm going nowhere.";
+artistic[10, 1] = "Dion DiMucci - The Wanderer";
+
+artistic[11, 0] = "And the lights, they glow. Like I just lost the World War.";
+artistic[11, 1] = "Miike Snow - Genghis Khan";
+
+artistic[12, 0] = "I wanna feel oppressed without any rest.";
+artistic[12, 1] = "Jain - Makeba";
+
+artistic[13, 0] = "I've been feeling old, I've been feeling cold.";
+artistic[13, 1] = "Flume &amp; Chet Faker - Drop the Game";
+
+artistic[14, 0] = "I build a home and wait for someone to tear it down.";
+artistic[14, 1] = "Alice Merton - No Roots";
+
+artistic[15, 0] = "So if you wanna dance dance. Let's start the show.";
+artistic[15, 1] = "Ofenbach - Be Mine";
+
+artistic[16, 0] = "I'm going blind from this sweet-sweet craving.";
+artistic[16, 1] = "DNCE - Cake by the Ocean";
+
+artistic[17, 0] = "Country roads, take me home. To the place I belong.";
+artistic[17, 1] = "John Denver - Take Me Home, Country Roads";
+
+artistic[18, 0] = "That's the price you pay. Leave behind your heartache, cast away.";
+artistic[18, 1] = "Imagine Dragons - Natural";
+
+artistic[19, 0] = "Yeah runnin' down a dream. That never would come to me.";
+artistic[19, 1] = "Tom Petty - Runnin' Down A Dream";
 
 
 </string>
