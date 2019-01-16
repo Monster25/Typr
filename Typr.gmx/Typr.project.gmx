@@ -22,8 +22,8 @@
       <sound>sound\snd_correct_07</sound>
       <sound>sound\snd_correct_08</sound>
       <sound>sound\snd_incorrect_01</sound>
-      <sound>sound\bg_01</sound>
       <sound>sound\bg_02</sound>
+      <sound>sound\bg_03</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -92,6 +92,8 @@
     <objects name="Menu">
       <object>objects\obj_menu</object>
       <object>objects\obj_menu_animations</object>
+      <object>objects\obj_tutorial</object>
+      <object>objects\obj_credits</object>
       <object>objects\obj_altray_logo</object>
     </objects>
     <objects name="Testing">
@@ -102,6 +104,8 @@
     <room>rooms\rm_black</room>
     <room>rooms\rm_splash</room>
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_credits</room>
+    <room>rooms\rm_tutorial</room>
     <room>rooms\rm_level</room>
     <room>rooms\rm_end</room>
   </rooms>

@@ -40,7 +40,9 @@ if (state_new)
     if (audio_is_playing(obj_sound.music_01))
     audio_stop_sound(obj_sound.music_01);
 }
-
+//Play music
+if (!audio_is_playing(obj_sound.music_02))
+audio_play_sound(obj_sound.music_02,1,1);
 //Get Player input
 scr_player_input();
 //Escape to go back to menu
@@ -75,6 +77,8 @@ real_time+=1/room_speed;
 //Letter Combo checker
 if (color == c_red)
 {
+if(comboer!=0)
+
 comboer = 0;
 letter_count_correct = 0;
 ok = 0;
@@ -99,6 +103,8 @@ if (j == -1 && string_length(player_input)>0 && string_char_at(player_input,stri
 {
 //audio_play_sound(obj_sound.incorrect_word,1,0)
 color = c_red;
+if (comboer!=0)
+scr_float_text(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/6),0.5,80,"!!RESET!!",1);
 j = string_length(player_input)-1;
 }
 else if (string_length(player_input)>0 && j == -1)
@@ -124,14 +130,16 @@ limiter++;
 
 //Change combo when letter count gets high enough
 if (letter_count_correct >= letter_combo[comboer,0] && comboer<array_height_2d(letter_combo)-1)
+{
 comboer++;
-
+scr_float_text(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/4),0.5,80,"x"+string(comboer+1),0);
+}
 //Correct word
 if (player_input == display_word)
 {
 //Floating animation
 //scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,40,time_gain_gibbrsh*string_length(words[current_word]),0);
-scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,80,letter_score_gibbrsh*string_length(words[current_word])*letter_combo[comboer,1],0);
+scr_float_text(round(global.displayWidth/2-string_width(current_paragraph)/2+obj_gui.relative_distance[current_word]+string_width(words[current_word])/2-string_width(" ")),round(global.displayHeight/2-string_height(words[current_word])),0.5,80,"+"+string(letter_score_gibbrsh*string_length(words[current_word])*letter_combo[comboer,1]),0);
 //Sound effect
 //audio_play_sound(obj_sound.correct_paragraph,1,0);
 if (current_word != array_length_1d(words)-1)

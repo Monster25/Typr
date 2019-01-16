@@ -57,7 +57,7 @@ state_init("menu");
             <kind>1</kind>
             <string>///Classic Mode Variables
 time_gain_classic = 0.15; //per letter
-initial_time_classic = 200;   ; //initial time
+initial_time_classic = 180;   ; //initial time
 current_paragraph = 0;
 letter_score_classic = 1; //per letter score    
 //Used for word numbering in paragraph
@@ -72,9 +72,9 @@ paragraph_count = 0; //counter for nr of paragraphs completed
 //Limits for paragraph generation
 difficulty_changer_classic = 0;
 //[nr of paragrahps to get to, difficulty level]
-difficulty_ceiling_classic[0] = 2;
-difficulty_ceiling_classic[1] = 5;
-difficulty_ceiling_classic[2] = 8;
+difficulty_ceiling_classic[0] = 4;
+difficulty_ceiling_classic[1] = 8;
+difficulty_ceiling_classic[2] = 12;
 
 //Sentence for display
 full_sentence = "";
@@ -101,7 +101,7 @@ full_sentence = "";
           <argument>
             <kind>1</kind>
             <string>///Gibrrsh Mode Variables
-initial_time_gibbrsh = 45; //initial time for this mode
+initial_time_gibbrsh = 180; //initial time for this mode
 
 time_gain_gibbrsh = 0.45; //per letter
 letter_score_gibbrsh = 1; //score per letter
@@ -113,19 +113,19 @@ limiter = 0;
 //[Lower limit, Higher Limit, nr of paragraphs to get past it, lower limit of words in para, higher limit of words in para]
 letter_limits[0,0] = 3;
 letter_limits[0,1] = 8;
-letter_limits[0,2] = 8;
+letter_limits[0,2] = 6;
 letter_limits[0,3] = 3;
 letter_limits[0,4] = 6;
 
 letter_limits[1,0] = 5;
 letter_limits[1,1] = 10;
-letter_limits[1,2] = 16;
+letter_limits[1,2] = 10;
 letter_limits[1,3] = 4;
 letter_limits[1,4] = 7;
 
 letter_limits[2,0] = 8;
 letter_limits[2,1] = 14;
-letter_limits[2,2] = 32;
+letter_limits[2,2] = 14;
 letter_limits[2,3] = 1;
 letter_limits[2,4] = 2;
 
@@ -228,16 +228,16 @@ academic[23, 1] = "Etymology of England";
 academic[24, 0] = "The oldest proto-human bones discovered in England date from 500,000 years ago.";
 academic[24, 1] = "England";
 
-academic[25, 0] = "There is enough DNA in the average person's body to stretch from the sun to Pluto and back, 17 times";
+academic[25, 0] = "There is enough DNA in the average person's body to stretch from the sun to Pluto and back, 17 times.";
 academic[25, 1] = "Scientific Facts #1";
 
-academic[26, 0] = "The average human body carries ten times more bacterial cells than human cells";
+academic[26, 0] = "The average human body carries ten times more bacterial cells than human cells.";
 academic[26, 1] = "Scientific Facts #2";
 
-academic[27, 0] = "At over 2000 kilometers long, The Great Barrier Reef is the largest living structure on Earth";
+academic[27, 0] = "At over 2000 kilometers long, The Great Barrier Reef is the largest living structure on Earth.";
 academic[27, 1] = "Scientific Facts #3";
 
-academic[28, 0] = "In an entire lifetime, the average person walks the equivalent of five times around the world";
+academic[28, 0] = "In an entire lifetime, the average person walks the equivalent of five times around the world.";
 academic[28, 1] = "Scientific Facts #4";
 
 academic[29, 0] = "An individual blood cell takes about 60 seconds to make a complete circuit of the body.";
@@ -280,7 +280,7 @@ quotes[10, 1] = "Dr. Suess";
 quotes[11, 0] = "Get busy living or get busy dying.";
 quotes[11, 1] = "Stephen King";
 
-quotes[12, 0] = "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do..";
+quotes[12, 0] = "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do.";
 quotes[12, 1] = "Mark Twain";
 
 quotes[13, 0] = "Great minds discuss ideas, average minds discuss events, small minds discuss people.";
@@ -738,6 +738,8 @@ bg_colors[29, 3] = c_white; //outline
 music_playing = 1;
 se_playing = 1;
 amb_playing = 1;
+
+mode_to_play = 0;
 </string>
           </argument>
         </arguments>

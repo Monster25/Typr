@@ -28,7 +28,8 @@
             <string>///Properties
 menu[0] = "Classic";
 menu[1] = "Gibbrsh";
-menu[2] = "Quit";
+menu[2] = "Credits";
+menu[3] = "Quit";
 space = 80;
 mpos = 0;
 logo = "";
@@ -157,7 +158,8 @@ draw_set_font(fnt_menu);
 
 scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Classic");
 scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3+string_height("Classic")*1.6),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Gibbrsh");
-scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3+string_height("Classic")*3.2),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Quit");
+scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3+string_height("Classic")*3.2),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Credits");
+scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2.3+string_height("Classic")*4.8),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),"Quit");
 scr_draw_text_outline(round(global.displayWidth/2+string_width(menu[mpos])/2+10),round(global.displayHeight/2.3+string_height("Classic")*1.6*mpos-5),obj_game_control.bg_colors[obj_game_control.color_combo,3],draw_get_color(),blinker);
 
 </string>

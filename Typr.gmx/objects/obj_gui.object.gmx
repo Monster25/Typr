@@ -121,6 +121,7 @@ draw_set_color(obj_game_control.bg_colors[obj_game_control.color_combo,1]);
 
 draw_set_font(fnt_text);
 draw_set_halign(fa_center);
+draw_set_valign(fa_top);
 //Combo bar
 var pc;
 pc = obj_game_control.comboer/(array_height_2d(obj_game_control.letter_combo)-1)*100;
@@ -129,13 +130,17 @@ pg+=2;
 if (pg&gt;pc &amp;&amp; pg &gt;= 0)
 pg-=2
 
+
 draw_healthbar(round(global.displayWidth/2-100),round(global.displayHeight/2-global.displayHeight/5),round(global.displayWidth/2+100),round(global.displayHeight/2-global.displayHeight/5+22),pg,obj_game_control.bg_colors[obj_game_control.color_combo,1],obj_game_control.bg_colors[obj_game_control.color_combo,2],obj_game_control.bg_colors[obj_game_control.color_combo,2],0,1,1);
 //scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight.2-global.displayHeight/5),obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.bg_colors[obj_game_control.color_combo,3],obj_game_control.letter_combo[obj_game_control.comboer,2])
 draw_set_font(fnt_text_italic_small);
 scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/5), obj_game_control.bg_colors[obj_game_control.color_combo,1], obj_game_control.bg_colors[obj_game_control.color_combo,3],"x"+string(obj_game_control.letter_combo[obj_game_control.comboer,1])) ;
 //Score and time
 draw_set_font(fnt_text);
+//if (obj_game_control.time &gt; 10)
 scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/2.5), obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,1], "Score: "+string(obj_game_control.best_score)+"     Time: "+string(round(obj_game_control.time)));
+//else
+//scr_draw_text_outline(round(global.displayWidth/2),round(global.displayHeight/2-global.displayHeight/2.5), obj_game_control.bg_colors[obj_game_control.color_combo,3], obj_game_control.bg_colors[obj_game_control.color_combo,2], "Score: "+string(obj_game_control.best_score)+"     Time: "+string(round(obj_game_control.time)));
 
 //draw_text(global.displayWidth/2-string_width("Time: ")/2,global.displayHeight/2-200, "Time: "+string(obj_game_control.time));
 

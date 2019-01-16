@@ -32,7 +32,7 @@ correct_word = snd_correct_08;
 correct_paragraph = snd_correct_03;
 incorrect_word = snd_incorrect_01;
 music_01 = bg_02;
-
+music_02 = bg_03;
 //Control sound
 //audio_group_set_gain(soundeffects,0.5,0);
 </string>

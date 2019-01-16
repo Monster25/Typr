@@ -32,6 +32,12 @@ room_set_height(asset_get_index("rm_menu"),global.height);
 //Set scoreboard room dimensions
 room_set_width(asset_get_index("rm_end"),global.width);
 room_set_height(asset_get_index("rm_end"),global.height);
+//Set tutorial room dimensions
+room_set_width(asset_get_index("rm_tutorial"),global.width);
+room_set_height(asset_get_index("rm_tutorial"),global.height);
+//Set credits room dimensions
+room_set_width(asset_get_index("rm_credits"),global.width);
+room_set_height(asset_get_index("rm_credits"),global.height);
 
 //Load Audiogroups
 instance_create(100,100,obj_audiogroup_load);

@@ -16,6 +16,9 @@ instance_create(0,0,obj_game_control);
 instance_create(0,0,obj_menu);
 instance_create(0,0,obj_menu_animations);
 
+obj_game_control.color_combo = scr_random_bg_color(obj_game_control.bg_colors);
+background_color = obj_game_control.bg_colors[obj_game_control.color_combo,0];
+
 if(instance_exists(obj_gui))
 obj_gui.visible = 0;</code>
   <enableViews>0</enableViews>
