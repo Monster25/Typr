@@ -1,5 +1,7 @@
 if (state_new)
 {
+
+audio_play_sound(obj_sound.scoreboard,1,0);
 color_combo = scr_random_bg_color(bg_colors);
 background_color = bg_colors[color_combo,0];
 //Stop level sound

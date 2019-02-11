@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>//Load Audiogroups
 music_loaded = audio_group_load(music);
-ambience_loaded = audio_group_load(ambience);
 soundeffects_loaded = audio_group_load(soundeffects);
 
 </string>
@@ -52,7 +51,7 @@ soundeffects_loaded = audio_group_load(soundeffects);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (music_loaded &amp;&amp; ambience_loaded &amp;&amp; soundeffects_loaded)
+            <string>if (music_loaded &amp;&amp; soundeffects_loaded)
 {
     scr_fade_outin(1, "rm_splash");
     instance_destroy();

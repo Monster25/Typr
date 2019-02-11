@@ -31,6 +31,8 @@ menu_push = snd_menu_02;
 correct_word = snd_correct_08;
 correct_paragraph = snd_correct_03;
 incorrect_word = snd_incorrect_01;
+timesup = snd_timesup;
+scoreboard = snd_scoreboard;
 music_01 = bg_02;
 music_02 = bg_03;
 //Control sound

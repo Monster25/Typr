@@ -79,6 +79,9 @@ real_time+=1/room_speed;
 //Player input update
 //player_input = keyboard_string;
 
+//Time audio
+if (time < 11 && !audio_is_playing(obj_sound.timesup))
+audio_play_sound(obj_sound.timesup,1,0);
 
 
 //Letter Combo checker

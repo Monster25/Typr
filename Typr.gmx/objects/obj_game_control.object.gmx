@@ -162,7 +162,7 @@ academic[1, 1] = "The Dacian Falx";
 academic[2, 0] = "Mercury is a heavy, silvery-white liquid metal. Compared to other metals, it is a poor conductor of heat.";
 academic[2, 1] = "Mercury (element)";
 
-academic[3, 0] = "In 85 BC, Caesar's father died suddenly, so Caesar was the head of the family at 16.";
+academic[3, 0] = "In 85 BC, Caesar's father died suddenly, so Caesar became the head of the family at 16.";
 academic[3, 1] = "Gaius Julius Caesar";
 
 academic[4, 0] = "The Benedictines are a Catholic religious order of enclosed monks and nuns that follow the Rule of Saint Benedict.";
@@ -213,7 +213,7 @@ academic[18, 1] = "Electrical Conduction";
 academic[19, 0] = "Knives such as the seax and other blades of similar length, between 1 and 2 feet, are sometimes construed as swords.";
 academic[19, 1] = "Classification of Swords";
 
-academic[20, 0] = "The softness of copper partly explains its high electrical conductivity and high thermal conductivity.";
+academic[20, 0] = "The softness of copper partly explains its high electrical and thermal conductivity.";
 academic[20, 1] = "Copper (element)";
 
 academic[21, 0] = "There are ongoing investigations assessing the past habitability potential of Mars, as well as the possibility of extant life.";
@@ -242,6 +242,96 @@ academic[28, 1] = "Scientific Facts #4";
 
 academic[29, 0] = "An individual blood cell takes about 60 seconds to make a complete circuit of the body.";
 academic[29, 1] = "Scientific Facts #5";
+
+academic[30, 0] = "Giant penguins about the size of a grown man waddled around New Zealand about 59 million years ago.";
+academic[30, 1] = "Scientific Facts #6";
+
+academic[31, 0] = "The world's smallest fidget spinner is 100 microns wide.";
+academic[31, 1] = "Scientific Facts #7";
+
+academic[32, 0] = "Precious metals on earth, such as gold and platinum, have originated in the stars.";
+academic[32, 1] = "Scientific Facts #8";
+
+academic[33, 0] = "The moon once had an atmosphere.";
+academic[33, 1] = "Scientific Facts #9";
+
+academic[34, 0] = "Babies have around 100 more bones than adults.";
+academic[34, 1] = "Scientific Facts #10";
+
+academic[35, 0] = "The Eiffel Tower can be 15 cm taller during the summer.";
+academic[35, 1] = "Scientific Facts #11";
+
+academic[36, 0] = "A fifth of Earth's oxygen is produced by the Amazon rainforest";
+academic[36, 1] = "Scientific Facts #12";
+
+academic[37, 0] = "Some metals are so reactive that they explode on contact with water.";
+academic[37, 1] = "Scientific Facts #13";
+
+academic[38, 0] = "A teaspoonful of neutron star would weigh 6 billion tons.";
+academic[38, 1] = "Scientific Facts #14";
+
+academic[39, 0] = "Hawaii moves 7.5 cm closer to Alaska every year.";
+academic[39, 1] = "Scientific Facts #15";
+
+academic[40, 0] = "Chalk is made from trillions of microscopic plankton fossils.";
+academic[40, 1] = "Scientific Facts #16";
+
+academic[41, 0] = "In 2.3 billion years it will be too hot for life to exist on Earth.";
+academic[41, 1] = "Scientific Facts #17";
+
+academic[42, 0] = "Polar bears are nearly undetectable by infrared cameras.";
+academic[42, 1] = "Scientific Facts #18";
+
+academic[43, 0] = "It takes 8 minutes, 19 seconds for light to travel from the Sun to the Earth.";
+academic[43, 1] = "Scientific Facts #19";
+
+academic[44, 0] = "If you took out all the empty space in our atoms, the human race could fit in the volume of a sugar cube.";
+academic[44, 1] = "Scientific Facts #20";
+
+academic[45, 0] = "Stomach acid is strong enough to dissolve stainless steel.";
+academic[45, 1] = "Scientific Facts #21";
+
+academic[46, 0] = "The Earth is a giant magnet. Its magnetic field is used by compass needles worldwide.";
+academic[46, 1] = "Scientific Facts #22";
+
+academic[47, 0] = "Venus is the only planet to spin clockwise.";
+academic[47, 1] = "Scientific Facts #23";
+
+academic[48, 0] = "A flea can accelerate faster than the Space Shuttle.";
+academic[48, 1] = "Scientific Facts #24";
+
+academic[49, 0] = "In physics, a state of matter is one of the distinct forms in which matter can exist. The four most common are solid, liquid, gas and plasma.";
+academic[49, 1] = "Matter in Physics";
+
+academic[50, 0] = "Classical Greek culture gave great importance to knowledge.";
+academic[50, 1] = "Ancient Greece";
+
+academic[51, 0] = "Herodotus is widely known as the 'father of history'. His Histories are eponymous of the entire field.";
+academic[51, 1] = "Herodotus";
+
+academic[52, 0] = "The Lelantine War (710 – 650 BC) is the earliest documented war of the ancient Greek period.";
+academic[52, 1] = "Ancient Greece";
+
+academic[53, 0] = "Athens suffered a land and agrarian crisis in the late 7th century BC, again resulting in civil strife.";
+academic[53, 1] = "Ancient Greece";
+
+academic[54, 0] = "The gods of Greek mythology are described as having essentially corporeal but ideal bodies.";
+academic[54, 1] = "Greek Mythology";
+
+academic[55, 0] = "Most gods were associated with specific aspects of life. For example, Aphrodite was the goddess of love and beauty.";
+academic[55, 1] = "Greek Mythology";
+
+academic[56, 0] = "There were ancient towns and cities that also adopted Heracles as a patron deity, contributing to the spread of his cult.";
+academic[56, 1] = "Heracles";
+
+academic[57, 0] = "In a fit of madness, induced by Hera, Heracles killed his children by Megara.";
+academic[57, 1] = "Heracles";
+
+academic[58, 0] = "The Romans gradually subdued the other peoples on the Italian peninsula, including the Etruscans.";
+academic[58, 1] = "Ancient Rome";
+
+academic[59, 0] = "The war began with the audacious invasion of Hispania by Hannibal, the Carthaginian general who had led operations on Sicily in the First Punic War.";
+academic[59, 1] = "The Second Punic War";
 
 //Qutoes (From movies and stuff)
 quotes[0, 0] = "The die has been cast.";
