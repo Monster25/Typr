@@ -57,7 +57,7 @@ state_init("menu");
             <kind>1</kind>
             <string>///Classic Mode Variables
 time_gain_classic = 0.15; //per letter
-initial_time_classic = 180;   ; //initial time
+initial_time_classic = 90;   ; //initial time
 current_paragraph = 0;
 letter_score_classic = 1; //per letter score    
 //Used for word numbering in paragraph
@@ -101,7 +101,7 @@ full_sentence = "";
           <argument>
             <kind>1</kind>
             <string>///Gibrrsh Mode Variables
-initial_time_gibbrsh = 180; //initial time for this mode
+initial_time_gibbrsh = 140; //initial time for this mode
 
 time_gain_gibbrsh = 0.45; //per letter
 letter_score_gibbrsh = 1; //score per letter
@@ -113,19 +113,19 @@ limiter = 0;
 //[Lower limit, Higher Limit, nr of paragraphs to get past it, lower limit of words in para, higher limit of words in para]
 letter_limits[0,0] = 3;
 letter_limits[0,1] = 8;
-letter_limits[0,2] = 6;
+letter_limits[0,2] = 3;
 letter_limits[0,3] = 3;
 letter_limits[0,4] = 6;
 
 letter_limits[1,0] = 5;
 letter_limits[1,1] = 10;
-letter_limits[1,2] = 10;
+letter_limits[1,2] = 6;
 letter_limits[1,3] = 4;
 letter_limits[1,4] = 7;
 
 letter_limits[2,0] = 8;
 letter_limits[2,1] = 14;
-letter_limits[2,2] = 14;
+letter_limits[2,2] = 10;
 letter_limits[2,3] = 1;
 letter_limits[2,4] = 2;
 
@@ -153,6 +153,7 @@ current_difficulty_gibbrsh = 0; //increasing difficulty level
             <kind>1</kind>
             <string>///Classic Mode Paragraphs
 //Academic (wikipedia and historical evidence)
+
 academic[0, 0] = "In 212, during the reign of Caracalla, Roman citizenship was granted to all freeborn inhabitants of the Empire.";
 academic[0, 1] = "History of the Roman Empire";
 
@@ -229,78 +230,78 @@ academic[24, 0] = "The oldest proto-human bones discovered in England date from 
 academic[24, 1] = "England";
 
 academic[25, 0] = "There is enough DNA in the average person's body to stretch from the sun to Pluto and back, 17 times.";
-academic[25, 1] = "Scientific Facts #1";
+academic[25, 1] = "Scientific Facts \#1";
 
 academic[26, 0] = "The average human body carries ten times more bacterial cells than human cells.";
-academic[26, 1] = "Scientific Facts #2";
+academic[26, 1] = "Scientific Facts \#2";
 
 academic[27, 0] = "At over 2000 kilometers long, The Great Barrier Reef is the largest living structure on Earth.";
-academic[27, 1] = "Scientific Facts #3";
+academic[27, 1] = "Scientific Facts \#3";
 
 academic[28, 0] = "In an entire lifetime, the average person walks the equivalent of five times around the world.";
-academic[28, 1] = "Scientific Facts #4";
+academic[28, 1] = "Scientific Facts \#4";
 
 academic[29, 0] = "An individual blood cell takes about 60 seconds to make a complete circuit of the body.";
-academic[29, 1] = "Scientific Facts #5";
+academic[29, 1] = "Scientific Facts \#5";
 
 academic[30, 0] = "Giant penguins about the size of a grown man waddled around New Zealand about 59 million years ago.";
-academic[30, 1] = "Scientific Facts #6";
+academic[30, 1] = "Scientific Facts \#6";
 
 academic[31, 0] = "The world's smallest fidget spinner is 100 microns wide.";
-academic[31, 1] = "Scientific Facts #7";
+academic[31, 1] = "Scientific Facts \#7";
 
 academic[32, 0] = "Precious metals on earth, such as gold and platinum, have originated in the stars.";
-academic[32, 1] = "Scientific Facts #8";
+academic[32, 1] = "Scientific Facts \#8";
 
 academic[33, 0] = "The moon once had an atmosphere.";
-academic[33, 1] = "Scientific Facts #9";
+academic[33, 1] = "Scientific Facts \#9";
 
 academic[34, 0] = "Babies have around 100 more bones than adults.";
-academic[34, 1] = "Scientific Facts #10";
+academic[34, 1] = "Scientific Facts \#10";
 
 academic[35, 0] = "The Eiffel Tower can be 15 cm taller during the summer.";
-academic[35, 1] = "Scientific Facts #11";
+academic[35, 1] = "Scientific Facts \#11";
 
-academic[36, 0] = "A fifth of Earth's oxygen is produced by the Amazon rainforest";
-academic[36, 1] = "Scientific Facts #12";
+academic[36, 0] = "A fifth of Earth's oxygen is produced by the Amazon rainforest.";
+academic[36, 1] = "Scientific Facts \#12";
 
 academic[37, 0] = "Some metals are so reactive that they explode on contact with water.";
-academic[37, 1] = "Scientific Facts #13";
+academic[37, 1] = "Scientific Facts \#13";
 
 academic[38, 0] = "A teaspoonful of neutron star would weigh 6 billion tons.";
-academic[38, 1] = "Scientific Facts #14";
+academic[38, 1] = "Scientific Facts \#14";
 
 academic[39, 0] = "Hawaii moves 7.5 cm closer to Alaska every year.";
-academic[39, 1] = "Scientific Facts #15";
+academic[39, 1] = "Scientific Facts \#15";
 
 academic[40, 0] = "Chalk is made from trillions of microscopic plankton fossils.";
-academic[40, 1] = "Scientific Facts #16";
+academic[40, 1] = "Scientific Facts \#16";
 
 academic[41, 0] = "In 2.3 billion years it will be too hot for life to exist on Earth.";
-academic[41, 1] = "Scientific Facts #17";
+academic[41, 1] = "Scientific Facts \#17";
 
 academic[42, 0] = "Polar bears are nearly undetectable by infrared cameras.";
-academic[42, 1] = "Scientific Facts #18";
+academic[42, 1] = "Scientific Facts \#18";
 
 academic[43, 0] = "It takes 8 minutes, 19 seconds for light to travel from the Sun to the Earth.";
-academic[43, 1] = "Scientific Facts #19";
+academic[43, 1] = "Scientific Facts \#19";
 
 academic[44, 0] = "If you took out all the empty space in our atoms, the human race could fit in the volume of a sugar cube.";
-academic[44, 1] = "Scientific Facts #20";
+academic[44, 1] = "Scientific Facts \#20";
 
 academic[45, 0] = "Stomach acid is strong enough to dissolve stainless steel.";
-academic[45, 1] = "Scientific Facts #21";
+academic[45, 1] = "Scientific Facts \#21";
 
 academic[46, 0] = "The Earth is a giant magnet. Its magnetic field is used by compass needles worldwide.";
-academic[46, 1] = "Scientific Facts #22";
+academic[46, 1] = "Scientific Facts \#22";
 
 academic[47, 0] = "Venus is the only planet to spin clockwise.";
-academic[47, 1] = "Scientific Facts #23";
+academic[47, 1] = "Scientific Facts \#23";
 
 academic[48, 0] = "A flea can accelerate faster than the Space Shuttle.";
-academic[48, 1] = "Scientific Facts #24";
+academic[48, 1] = "Scientific Facts \#24";
 
-academic[49, 0] = "In physics, a state of matter is one of the distinct forms in which matter can exist. The four most common are solid, liquid, gas and plasma.";
+academic[49, 0] = "In physics, the four most common states of matter are solid, liquid, gas and plasma.";
 academic[49, 1] = "Matter in Physics";
 
 academic[50, 0] = "Classical Greek culture gave great importance to knowledge.";
@@ -309,7 +310,7 @@ academic[50, 1] = "Ancient Greece";
 academic[51, 0] = "Herodotus is widely known as the 'father of history'. His Histories are eponymous of the entire field.";
 academic[51, 1] = "Herodotus";
 
-academic[52, 0] = "The Lelantine War (710 – 650 BC) is the earliest documented war of the ancient Greek period.";
+academic[52, 0] = "The Lelantine War is the earliest documented war of the ancient Greek period.";
 academic[52, 1] = "Ancient Greece";
 
 academic[53, 0] = "Athens suffered a land and agrarian crisis in the late 7th century BC, again resulting in civil strife.";
@@ -330,8 +331,128 @@ academic[57, 1] = "Heracles";
 academic[58, 0] = "The Romans gradually subdued the other peoples on the Italian peninsula, including the Etruscans.";
 academic[58, 1] = "Ancient Rome";
 
-academic[59, 0] = "The war began with the audacious invasion of Hispania by Hannibal, the Carthaginian general who had led operations on Sicily in the First Punic War.";
-academic[59, 1] = "The Second Punic War";
+academic[59, 0] = "The largest ever hailstone weighed over 1kg and fell in Bangladesh in 1986.";
+academic[59, 1] = "Scientific Facts \#25";
+
+academic[60, 0] = "Every second around 100 lightning bolts strike the Earth.";
+academic[60, 1] = "Scientific Facts \#26";
+
+academic[61, 0] = "Every year lightning kills 1000 people.";
+academic[61, 1] = "Scientific Facts \#27";
+
+academic[62, 0] = "The war began with the audacious invasion of Hispania by Hannibal.";
+academic[62, 1] = "The Second Punic War";
+
+academic[63, 0] = "In October 1999 an Iceberg the size of London broke free from the Antarctic ice shelf.";
+academic[63, 1] = "Scientific Facts \#28";
+
+academic[64, 0] = "If you could drive your car straight up you would arrive in space in just over an hour.";
+academic[64, 1] = "Scientific Facts \#29";
+
+academic[65, 0] = "Human tapeworms can grow up to 22.9m.";
+academic[65, 1] = "Scientific Facts \#30";
+
+academic[66, 0] = "The dinosaurs became extinct before the Rockies or the Alps were formed.";
+academic[66, 1] = "Scientific Facts \#31";
+
+academic[67, 0] = "The air at the summit of Mount Everest, 29,029 feet is only a third as thick as the air at sea level.";
+academic[67, 1] = "Scientific Facts \#32";
+
+academic[68, 0] = "DNA was first discovered in 1869 by Swiss Friedrich Mieschler.";
+academic[68, 1] = "Scientific Facts \#33";
+
+academic[69, 0] = "The molecular structure of DNA was first determined by Watson and Crick in 1953.";
+academic[69, 1] = "Scientific Facts \#34";
+
+academic[70, 0] = "The first synthetic human chromosome was constructed by US scientists in 1997.";
+academic[70, 1] = "Scientific Facts \#35";
+
+academic[71, 0] = "The thermometer was invented in 1607 by Galileo.";
+academic[71, 1] = "Scientific Facts \#36";
+
+academic[72, 0] = "Englishman Roger Bacon invented the magnifying glass in 1250.";
+academic[72, 1] = "Scientific Facts \#37";
+
+academic[73, 0] = "Wilhelm Rontgen won the first Nobel Prize for physics for discovering X-rays in 1895.";
+academic[73, 1] = "Scientific Facts \#38";
+
+academic[74, 0] = "The tallest tree ever was an Australian eucalyptus. In 1872 it was measured at 435 feet tall.";
+academic[74, 1] = "Scientific Facts \#39";
+
+academic[75, 0] = "Christian Barnard performed the first heart transplant in 1967, the patient lived for 18 days.";
+academic[75, 1] = "Scientific Facts \#40";
+
+academic[76, 0] = "The earliest wine makers lived in Egypt around 2300 BC.";
+academic[76, 1] = "Scientific Facts \#41";
+
+academic[77, 0] = "The Ebola virus kills 4 out of every 5 humans it infects.";
+academic[77, 1] = "Scientific Facts \#42";
+
+academic[78, 0] = "Humans have 46 chromosomes, peas have 14 and crayfish have 200.";
+academic[78, 1] = "Scientific Facts \#43";
+
+academic[79, 0] = "There are more living organisms on the skin of each human than there are humans on the surface of the earth.";
+academic[79, 1] = "Scientific Facts \#44";
+
+academic[80, 0] = "The grey whale migrates 12,500 miles from the Artic to Mexico and back every year.";
+academic[80, 1] = "Scientific Facts \#45";
+
+academic[81, 0] = "Koalas sleep an average of 22 hours a day, two hours more than the sloth.";
+academic[81, 1] = "Scientific Facts \#46";
+
+academic[82, 0] = "Even travelling at the speed of light it would take 2 million years to reach the nearest large galaxy, Andromeda.";
+academic[82, 1] = "Scientific Facts \#47";
+
+academic[83, 0] = "The largest dinosaur ever discovered was Seismosaurus who was over 100 feet long and weighed up to 80 tonnes.";
+academic[83, 1] = "Scientific Facts \#48";
+
+academic[84, 0] = "In the 14th century the Black Death killed 75,000,000 people. It was carried by fleas on the black rat.";
+academic[84, 1] = "Scientific Facts \#49";
+
+academic[85, 0] = "A typical hurricane produces the energy equivalent to 8,000 one megaton bombs.";
+academic[85, 1] = "Scientific Facts \#50";
+
+academic[86, 0] = "After firing a final barrage of artillery lasting the night, Yamagata's men attacked Saigo's position.";
+academic[86, 1] = "Battle Of Shiroyama - Last stand of the Samurai";
+
+academic[87, 0] = "Consuls rarely employed all four legions at once to the same assignment.";
+academic[87, 1] = "Roman command - Battle of Cannae";
+
+academic[88, 0] = "Crossing the Alps, Hannibal reached the Italian peninsula in 218 BC.";
+academic[88, 1] = "The Second Punic War - Hannibal's Invasion of Italy";
+
+academic[89, 0] = "Darius chose a flat, open plain where he could deploy his forces, not wanting to be caught in a narrow battlefield.";
+academic[89, 1] = "Battle of Guagamela";
+
+academic[90, 0] = "Harold's forces deployed in a dense formation at the top of a steep slope.";
+academic[90, 1] = "Battle of Hastings";
+
+academic[91, 0] = "Thousands of troops appear to have been in the rearguard, containing servants and commoners.";
+academic[91, 1] = "Battle of Agincourt - French deployment";
+
+academic[92, 0] = "The English army was also well-fed and rested, giving them an advantage over the French, who did not rest before the battle.";
+academic[92, 1] = "Battle of Crecy";
+
+academic[93, 0] = "Waterloo was the decisive engagement of the Waterloo Campaign and Napoleon's last.";
+academic[93, 1] = "Battle of Waterloo";
+
+academic[94, 0] = "From a strategic point of view, by defending Thermopylae, the Greeks were making the best possible use of their forces.";
+academic[94, 1] = "Battle of Thermopylae";
+
+academic[95, 0] = "The Spaniards began building their American empire in the Caribbean, using islands such as Cuba and Puerto Rico.";
+academic[95, 1] = "The European colonization of the Americas";
+
+academic[96, 0] = "China futilely attempted to get foreign companies to forfeit their opium stores in exchange for tea.";
+academic[96, 1] = "The First Opium War";
+
+academic[97, 0] = "During 1856 - 1860, British forces fought towards legalization of the opium trade.";
+academic[97, 1] = "The Second Opium War";
+
+academic[98, 0] = "The victory of the Germanic tribes against Rome's legions in the Teutoburg Forest would have far-reaching effects on history.";
+academic[98, 1] = "Battle of Teutoburg Forest";
+
+academic[99, 0] = "Stephen inflicted a decisive defeat on the Ottomans, described as the greatest ever secured by Christianity against Islam.";
+academic[99, 1] = "Battle of Vaslui";
 
 //Qutoes (From movies and stuff)
 quotes[0, 0] = "The die has been cast.";
@@ -424,7 +545,218 @@ quotes[28, 1] = "Voltaire";
 quotes[29, 0] = "Life is made of ever so many partings welded together.";
 quotes[29, 1] = "Charles Dickens";
 
+quotes[30, 0] = "The greatest glory in living lies not in never falling, but in rising every time we fall.";
+quotes[30, 1] = "Nelson Mandela";
+
+quotes[31, 0] = "The way to get started is to quit talking and begin doing.";
+quotes[31, 1] = "Walt Disney";
+
+quotes[32, 0] = "If life were predictable it would cease to be life, and be without flavor.";
+quotes[32, 1] = "Eleanor Roosevelt";
+
+quotes[33, 0] = "Life is what happens when you're busy making other plans.";
+quotes[33, 1] = "John Lennon";
+
+quotes[34, 0] = "Always remember that you are absolutely unique. Just like everyone else.";
+quotes[34, 1] = "Margaret Mead";
+
+quotes[35, 0] = "When you reach the end of your rope, tie a knot in it and hang on.";
+quotes[35, 1] = "Franklin D. Roosevelt";
+
+quotes[36, 0] = "The future belongs to those who believe in the beauty of their dreams.";
+quotes[36, 1] = "Eleanor Roosevelt";
+
+quotes[37, 0] = "Tell me and I forget. Teach me and I remember. Involve me and I learn.";
+quotes[37, 1] = "Benjamin Franklin";
+
+quotes[38, 0] = "It is during our darkest moments that we must focus to see the light.";
+quotes[38, 1] = "Aristotle";
+
+quotes[39, 0] = "Whoever is happy will make others happy too.";
+quotes[39, 1] = "Anne Frank";
+
+quotes[40, 0] = "You will face many defeats in life, but never let yourself be defeated.";
+quotes[40, 1] = "Maya Angelou";
+
+quotes[41, 0] = "In the end, it's not the years in your life that count. It's the life in your years.";
+quotes[41, 1] = "Abraham Lincoln";
+
+quotes[42, 0] = "Never let the fear of striking out keep you from playing the game.";
+quotes[42, 1] = "Babe Ruth";
+
+quotes[43, 0] = "Life is either a daring adventure or nothing at all.";
+quotes[43, 1] = "Helen Keller";
+
+quotes[44, 0] = "The only impossible journey is the one you never begin.";
+quotes[44, 1] = "Tony Robbins";
+
+quotes[45, 0] = "Only a life lived for others is a life worthwhile.";
+quotes[45, 1] = "Albert Einstein";
+
+quotes[46, 0] = "The purpose of our lives is to be happy.";
+quotes[46, 1] = "Dalai Lama";
+
+quotes[47, 0] = "You only live once, but if you do it right, once is enough.";
+quotes[47, 1] = "Mae West";
+
+quotes[48, 0] = "Live in the sunshine, swim the sea, drink the wild air.";
+quotes[48, 1] = "Ralph Waldo Emerson";
+
+quotes[49, 0] = "Go confidently in the direction of your dreams! Live the life you've imagined.";
+quotes[49, 1] = "Henry David Thoreau";
+
+quotes[50, 0] = "The greatest glory in living lies not in never falling, but in rising every time we fall.";
+quotes[50, 1] = "Nelson Mandela";
+
+quotes[51, 0] = "Life is really simple, but we insist on making it complicated.";
+quotes[51, 1] = "Confucius";
+
+quotes[52, 0] = "May you live all the days of your life.";
+quotes[52, 1] = "Jonathan Swift";
+
+quotes[53, 0] = "Life itself is the most wonderful fairy tale.";
+quotes[53, 1] = "Hans Christian Andersen";
+
+quotes[54, 0] = "Do not let making a living prevent you from making a life.";
+quotes[54, 1] = "John Wooden";
+
+quotes[55, 0] = "Life is ours to be spent, not to be saved.";
+quotes[55, 1] = "D. H. Lawrence";
+
+quotes[56, 0] = "Keep smiling, because life is a beautiful thing and there's so much to smile about.";
+quotes[56, 1] = "Marilyn Monroe";
+
+quotes[57, 0] = "Life is a long lesson in humility.";
+quotes[57, 1] = "James M. Barrie";
+
+quotes[58, 0] = "In three words I can sum up everything I've learned about life: it goes on.";
+quotes[58, 1] = "Robert Frost";
+
+quotes[59, 0] = "Love the life you live. Live the life you love.";
+quotes[59, 1] = "Bob Marley";
+
+quotes[60, 0] = "Life is either a daring adventure or nothing at all.";
+quotes[60, 1] = "Helen Keller";
+
+quotes[61, 0] = "Life is trying things to see if they work.";
+quotes[61, 1] = "Ray Bradbury";
+
+quotes[62, 0] = "Success is not final. Failure is not fatal. It is the courage to continue that counts.";
+quotes[62, 1] = "Winston S. Churchill";
+
+quotes[63, 0] = "Success usually comes to those who are too busy to be looking for it.";
+quotes[63, 1] = "Henry David Thoreau";
+
+quotes[64, 0] = "If you really look closely, most overnight successes took a long time.";
+quotes[64, 1] = "Steve Jobs";
+
+quotes[65, 0] = "The secret of success is to do the common thing uncommonly well.";
+quotes[65, 1] = "John D. Rockefeller Jr.";
+
+quotes[66, 0] = "I find that the harder I work, the more luck I seem to have.";
+quotes[66, 1] = "Thomas Jefferson";
+
+quotes[67, 0] = "The secret of success is to do the common thing uncommonly well.";
+quotes[67, 1] = "John D. Rockefeller Jr.";
+
+quotes[68, 0] = "I never dreamed about success, I worked for it.";
+quotes[68, 1] = "Estee Lauder";
+
+quotes[69, 0] = "The only limit to our realization of tomorrow will be our doubts of today.";
+quotes[69, 1] = "Franklin D. Roosevelt";
+
+quotes[70, 0] = "It is better to fail in originality than to succeed in imitation.";
+quotes[70, 1] = "Herman Melville";
+
+quotes[71, 0] = "The road to success and the road to failure are almost exactly the same.";
+quotes[71, 1] = "Colin R. Davis";
+
+quotes[72, 0] = "I failed my way to success.";
+quotes[72, 1] = "Thomas Edison";
+
+quotes[73, 0] = "Things work out best for those who make the best of how things work out.";
+quotes[73, 1] = "John Wooden";
+
+quotes[74, 0] = "Try not to become a man of success. Rather become a man of value.";
+quotes[74, 1] = "Albert Einstein";
+
+quotes[75, 0] = "Don't be afraid to give up the good to go for the great.";
+quotes[75, 1] = "John D. Rockefeller";
+
+quotes[76, 0] = "Success is walking from failure to failure with no loss of enthusiasm.";
+quotes[76, 1] = "Winston Churchill";
+
+quotes[77, 0] = "If you genuinely want something, don't wait for it, teach yourself to be impatient.";
+quotes[77, 1] = "Gurbaksh Cahal";
+
+quotes[78, 0] = "The only place where success comes before work is in the dictionary.";
+quotes[78, 1] = "Vidal Sassoon";
+
+quotes[79, 0] = "If you are not willing to risk the usual, you will have to settle for the ordinary.";
+quotes[79, 1] = "Jim Rohn";
+
+quotes[80, 0] = "Before anything else, preparation is the key to success.";
+quotes[80, 1] = "Alexander Graham Bell";
+
+quotes[81, 0] = "Whether you think you can or you think you can't, you're right.";
+quotes[81, 1] = "Henry Ford";
+
+quotes[82, 0] = "Nothing is impossible, the word itself says, 'I'm possible!'";
+quotes[82, 1] = "Audrey Hepburn";
+
+quotes[83, 0] = "The question isn't who is going to let me. It's who is going to stop me.";
+quotes[83, 1] = "Ayn Rand";
+
+quotes[84, 0] = "The man who passes the sentence should swing the sword.";
+quotes[84, 1] = "Ned Stark - Game of Thrones";
+
+quotes[85, 0] = "I have a tender spot in my heart for cripples, bastards and broken things.";
+quotes[85, 1] = "Tyrion Lannister - Game of Thrones";
+
+quotes[86, 0] = "When you play the game of thrones, you win or you die.";
+quotes[86, 1] = "Cersei Lannister - Game of Thrones";
+
+quotes[87, 0] = "The night is dark and full of terrors.";
+quotes[87, 1] = "Melisandre - Game of Thrones";
+
+quotes[88, 0] = "You know nothing, Jon Snow.";
+quotes[88, 1] = "Ygritte - Game of Thrones";
+
+quotes[89, 0] = "Kick names, take ass.";
+quotes[89, 1] = "Mantis - Avengers: Infinity War";
+
+quotes[90, 0] = "Honor, young heroes. No matter how dire the battle, never forsake it.";
+quotes[90, 1] = "Varok Saurfang - World of Warcraft";
+
+quotes[91, 0] = "You are not prepared!";
+quotes[91, 1] = "Illidan Stormrage - World of Warcraft";
+
+quotes[92, 0] = "There is no good. No evil. No light. There is only power.";
+quotes[92, 1] = "Archbishop Benedictus - World of Warcraft";
+
+quotes[93, 0] = "Men, women and children... None were spared the master's wrath. Your death will be no different.";
+quotes[93, 1] = "Captain Falric - World of Warcraft";
+
+quotes[94, 0] = "War, war never changes.";
+quotes[94, 1] = "Fallout";
+
+quotes[95, 0] = "Good men mean well. We just don't always end up doing well.";
+quotes[95, 1] = "Isaac Clarke - Dead Space";
+
+quotes[96, 0] = "The right man in the wrong place can make all the difference in the world.";
+quotes[96, 1] = "G-Man - Half-Life 2";
+
+quotes[97, 0] = "No gods or kings. Only man.";
+quotes[97, 1] = "Andrew Ryan - Bioshock";
+
+quotes[98, 0] = "To live forever... when those I loved are dead, and I to blame? I choose death.";
+quotes[98, 1] = "The Prince - Prince of Persia";
+
+quotes[99, 0] = "Go then, my Prince. But know this. Your journey will not end well. You cannot change your fate. No man can.";
+quotes[99, 1] = "The Old Man - Prince of Persia";
+
 //Artistic (Music)
+
 artistic[0, 0] = "Why does the sun go on shining?";
 artistic[0, 1] = "Skeeter Davis - The End of The World";
 
@@ -514,6 +846,217 @@ artistic[28, 1] = "Twenty One Pilots - Chlorine";
 
 artistic[29, 0] = "All my enemies who wouldn't wish who I was. But it's fun to fantasize.";
 artistic[29, 1] = "Twenty One Pilots - Ride";
+
+artistic[30, 0] = "Before Michael Jackson died, he called me and said 'Midget, sing this song in my memory.'";
+artistic[30, 1] = "Mihaita Piticu - Queen of Queens";
+
+artistic[31, 0] = "Don't leave me my life, because my heart hurts.";
+artistic[31, 1] = "Florin Salam - I Love You From My Heart";
+
+artistic[32, 0] = "We're not the same, nobody's perfect. Every man has a certain flaw.";
+artistic[32, 1] = "Vali Vijelie - We're Not The Same";
+
+artistic[33, 0] = "This Little gigolo has got me getting crazy";
+artistic[33, 1] = "Elena Gheorghe - Mamma Mia";
+
+artistic[34, 0] = "There's somethin' 'bout his manners.";
+artistic[34, 1] = "Camila Cabello - Havana";
+
+artistic[35, 0] = "Blow a kiss, fire a gun.";
+artistic[35, 1] = "Major Lazer - Lean On";
+
+artistic[36, 0] = "Hundred headlights making me blind. All of your pleasures catching my eye.";
+artistic[36, 1] = "Kwabs - Walk";
+
+artistic[37, 0] = "They call me the wanderer. Yeah, the wanderer. I roam around, around, around.";
+artistic[37, 1] = "Dion - The Wanderer";
+
+artistic[38, 0] = "I ain't fragile so don't cover me up, in bubble wrap.";
+artistic[38, 1] = "WiDE AWAKE - Turn Left";
+
+artistic[39, 0] = "She ask me light a fire like I'm Morrison.";
+artistic[39, 1] = "Post Malone - Rockstar";
+
+artistic[40, 0] = "Started a flame inside my heart. Baby don't ever put it out.";
+artistic[40, 1] = "INNA - Nirvana";
+
+artistic[41, 0] = "Yeah we're different from the masses, we go back, Jurassic.";
+artistic[41, 1] = "Krewella - Alibi";
+
+artistic[42, 0] = "I'm trying not to let these mind games play me.";
+artistic[42, 1] = "Felix Cartal and Lights - Love Me";
+
+artistic[43, 0] = "Look you got me, in a trance in just one glance.";
+artistic[43, 1] = "JINCO - Love Is A Miracle";
+
+artistic[44, 0] = "You're not the one that I need. To stay high on my feet";
+artistic[44, 1] = "Blaxy Girls - If You Feel My Love";
+
+artistic[45, 0] = "Well, I've been afraid of changing. 'Cause I've built my life around you.";
+artistic[45, 1] = "Fleetwood Mac - Landslide";
+
+artistic[46, 0] = "If I fail, if I succeed, at least I'll live as I believe.";
+artistic[46, 1] = "Whitney Houston - The Greatest Love of All";
+
+artistic[47, 0] = "Look at your children. See their faces in golden rays.";
+artistic[47, 1] = "David Bowie - Oh! You Pretty Things!";
+
+artistic[48, 0] = "I've got my tongue between your teeth.";
+artistic[48, 1] = "Troye Sivan - My, My, My";
+
+artistic[49, 0] = "I'll stop wearing black when they make a darker color.";
+artistic[49, 1] = "Fall Out Boy - Wilson (Expensive Mistakes)";
+
+artistic[50, 0] = "Cardi B, straight stuntin', can't tell me nothin'. Bossed up and I changed the game.";
+artistic[50, 1] = "Finesse - Bruno Mars";
+
+artistic[51, 0] = "Should I stay or should I go?";
+artistic[51, 1] = "The Clash - Should I stay or Should I go?";
+
+artistic[52, 0] = "I said, are you gonna be my girl?";
+artistic[52, 1] = "Jet - Are You Gonna Be My Girl?";
+
+artistic[53, 0] = "Don't want to hear about it. Every single one's got a story to tell.";
+artistic[53, 1] = "The White Stripes - Seven Nation Army";
+
+artistic[54, 0] = "Live fast, die young. Bad girls do it well.";
+artistic[54, 1] = "M.I.A. - Bad Girls";
+
+artistic[55, 0] = "My enemies are holding grudge, 'cause they don't have my value.";
+artistic[55, 1] = "Vali Vijelie - My Enemies Are Holding Grudge";
+
+artistic[56, 0] = "The world was on fire and no one could save me but you.";
+artistic[56, 1] = "Charlotte Cardin - Wicked Game";
+
+artistic[57, 0] = "This night is cold in the kingdom. I can feel you fade away.";
+artistic[57, 1] = "Alec Benjamin and Alessia Cara - Let Me Down Slowly";
+
+artistic[58, 0] = "Step into the spotlight, 'cause it's your turn.";
+artistic[58, 1] = "Pre Kai Ro - Cold";
+
+artistic[59, 0] = "The media made me the equivalent of a modern-day Genghis Khan.";
+artistic[59, 1] = "Eminem - Guts Over Fear";
+
+artistic[60, 0] = "Ohh I, and I love you, always in my heart you'll live on.";
+artistic[60, 1] = "Sia - I Forgive You";
+
+artistic[61, 0] = "Sing a song, 'cause I worship the ground you walk on.";
+artistic[61, 1] = "Skylar Grey - Kill For You";
+
+artistic[62, 0] = "Would you use your water bill to dry the stain like me?";
+artistic[62, 1] = "Halsey - Gasoline";
+
+artistic[63, 0] = "When it feels so good, but it's bad for you, can't say I don't want it 'cause I know I do.";
+artistic[63, 1] = "Normani - Love Lies";
+
+artistic[64, 0] = "All it'd take is one flight, we'd be in the same time zone.";
+artistic[64, 1] = "Shawn Mendes - Lost In Japan";
+
+artistic[65, 0] = "This love asylum, like an island, just me and you.";
+artistic[65, 1] = "Hayley Kiyoko - Feelings";
+
+artistic[66, 0] = "Universe must have my back, fell from the sky into my lap.";
+artistic[66, 1] = "Ariana Grande - Pete Davidson ";
+
+artistic[67, 0] = "Had to have high, high hopes for a living, shooting for the stars when I couldn't make a killing.";
+artistic[67, 1] = "Panic! At The Disco - High Hopes";
+
+artistic[68, 0] = "Once upon a time we had it all, somewhere down the line we went and lost it.";
+artistic[68, 1] = "Cheat Codes - Only You";
+
+artistic[69, 0] = "Call my girls and put 'em all on a spaceship.";
+artistic[69, 1] = "The Carters - APESHIT";
+
+artistic[70, 0] = "Won't close my eyes and hide the truth inside.";
+artistic[70, 1] = "Within Temptation - Stand My Ground";
+
+artistic[71, 0] = "Cannot believe it's an eye for an eye.";
+artistic[71, 1] = "Within Temptation - A Demon's Fate";
+
+artistic[72, 0] = "And I can see I've been wasting too much time.";
+artistic[72, 1] = "Within Temptation - Faster";
+
+artistic[73, 0] = "Are you looking for saviours. Chasing a dream. Love turned to hate.";
+artistic[73, 1] = "Within Temptation - Sinead";
+
+artistic[74, 0] = "I'm still around here screaming her name.";
+artistic[74, 1] = "Within Temptation - Lost";
+
+artistic[75, 0] = "Getting lost in the dark is my favorite part, let's count the ways we could make this last forever.";
+artistic[75, 1] = "Janelle Monae - Pynk";
+
+artistic[76, 0] = "If the text ain't freaky, I don't wanna read it.";
+artistic[76, 1] = "DJ Snake - Taki Taki";
+
+artistic[77, 0] = "Oh, you're just the same as I used to know.";
+artistic[77, 1] = "Elderbrook - Old Friend";
+
+artistic[78, 0] = "They please you, appease you, but I'm here to really see you.";
+artistic[78, 1] = "SAMAHTA - Light U Up";
+
+artistic[79, 0] = "Gonna rule the ocean glory. Till the waves find what's been burning.";
+artistic[79, 1] = "Feint - Shockwave";
+
+artistic[80, 0] = "Read my heart up on my sleeve you know I'm down.";
+artistic[80, 1] = "Yntendo and Sam F - Feels So Good";
+
+artistic[81, 0] = "I, hear the riot call. I, these beats yeah we kill 'em all.";
+artistic[81, 1] = "QUIX - Riot Call";
+
+artistic[82, 0] = "This is our song, it's a beating breathing living thing.";
+artistic[82, 1] = "TJessie Siren - The Sway";
+
+artistic[83, 0] = "We were cut from the same cloth. How is it that we're so in touch and so in love?";
+artistic[83, 1] = "Sanjoy - Shangri-La";
+
+artistic[84, 0] = "You thought that I'd be sad without ya, I love harder.";
+artistic[84, 1] = "Destiny's Child - Survivor";
+
+artistic[85, 0] = "Fate has a way of playing games. And I've been keeping score.";
+artistic[85, 1] = "K. Flay - Run For Your Life";
+
+artistic[86, 0] = "The world is a curse. It'll kill if you let it.";
+artistic[86, 1] = "K. Flay - High Enough";
+
+artistic[87, 0] = "Maxed out, minimum wage. My brain is a time bomb.";
+artistic[87, 1] = "Robert DeLong - Favorite Color Is Blue";
+
+artistic[88, 0] = "Living in the fast lane is getting kind of lonely.";
+artistic[88, 1] = "Bebe Rexha - Ferrari";
+
+artistic[89, 0] = "So lets let all hearts bleed, 'til they turn to rust.";
+artistic[89, 1] = "Bebe Rexha - The Way I Are";
+
+artistic[90, 0] = "And I, I've been in L.A. for way too long.";
+artistic[90, 1] = "Bebe Rexha - F.F.F.";
+
+artistic[91, 0] = "'Cause when it comes to you I can't say no. I don't wanna taste, I want it all.";
+artistic[91, 1] = "Bebe Rexha - Self Control";
+
+artistic[92, 0] = "Heavy water keeping us afloat. Pains my body as I let you go.";
+artistic[92, 1] = "Jonas Aden - Strangers Do"
+
+artistic[93, 0] = "My feet are taking me to your front door. I know I shouldn't though, heaven only knows that.";
+artistic[93, 1] = "The Chainsmokers - Side Effects";
+
+artistic[94, 0] = "You say she's just a friend now. Then why don't we call her?";
+artistic[94, 1] = "Anne-Marie - Ciao Adios";
+
+artistic[95, 0] = "It's not good enough for me. Since I've been with you, ooh.";
+artistic[95, 1] = "French Montana - Unforgettable";
+
+artistic[96, 0] = "I got the squad tatted on me from my neck to my ankles.";
+artistic[96, 1] = "Imagine Dragons - Sucker For Pain";
+
+artistic[97, 0] = "Your voice, it had the perfect flow. It got lost when you gave it up though.";
+artistic[97, 1] = "Grimes - Flesh Without Blood";
+
+artistic[98, 0] = "Faking like you got it in your pockets, yeah, that's bitch shit.";
+artistic[98, 1] = "ScHoolboy Q - Numb Numb Juice";
+
+artistic[99, 0] = "I just wanna feel myself, you want me to kill myself.";
+artistic[99, 1] = "Clour Cobain - Clout Co13a1n";
+
 
 
 

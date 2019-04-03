@@ -65,10 +65,14 @@ draw_text(200,1000,"Color id: "+string(obj_game_control.color_combo));
           <argument>
             <kind>1</kind>
             <string>///On/Off
+/*
 if (visible == 1)
 visible = 0;
 else
 visible = 1;
+*/
+obj_game_control.current_word = array_length_1d(obj_game_control.words)-1;
+
 </string>
           </argument>
         </arguments>

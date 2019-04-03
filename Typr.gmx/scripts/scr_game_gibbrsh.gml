@@ -74,6 +74,11 @@ state_switch("scoreboard");
 //Time moving
 time-=1/room_speed;
 real_time+=1/room_speed;
+
+//Time audio
+if (time < 11 && !audio_is_playing(obj_sound.timesup))
+audio_play_sound(obj_sound.timesup,1,0);
+
 //Letter Combo checker
 if (color == c_red)
 {

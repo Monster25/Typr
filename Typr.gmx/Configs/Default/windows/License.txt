@@ -6,7 +6,7 @@ Scope
 -----
 You may:
 
-Install and use this Application for personal, or commercial use [provided you have paid any license fee, if this applies];
+Install and use this Application for personal use [provided you have paid any license fee, if this applies];
 
 You must not:
 
